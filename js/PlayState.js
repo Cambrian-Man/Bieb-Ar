@@ -10,11 +10,25 @@
 
     function PlayState() {}
 
-    PlayState.prototype.create = function() {};
+    PlayState.prototype.create = function() {
+      var player;
+      player = new Ar.Player(Ar.Game, 128, 128);
+      return this.add.existing(player);
+    };
 
-    PlayState.prototype.render = function() {};
+    PlayState.prototype.render = function() {
+      return PlayState.__super__.render.call(this);
+    };
 
-    PlayState.prototype.preload = function() {};
+    PlayState.prototype.preload = function() {
+      Ar.Game.stage.scaleMode = Phaser.StageScaleMode.SHOW_ALL;
+      Ar.Game.stage.scale.scaleFactor.setTo(2, 2);
+      Ar.Game.stage.scale.maxWidth = 800;
+      Ar.Game.stage.scale.maxHeight = 600;
+      Ar.Game.stage.scale.setSize();
+      Ar.Game.stage.scale.refresh();
+      return Ar.Game.load.image('player', 'assets/gfx/player.png');
+    };
 
     return PlayState;
 
