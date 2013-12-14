@@ -1,0 +1,1005 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"inp",
+				"inputBox"
+			],
+			[
+				"coffee",
+				"coffee-script"
+			],
+			[
+				"in",
+				"inputBox"
+			],
+			[
+				"Z",
+				"ZC"
+			],
+			[
+				"red",
+				"redirect"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"sess",
+				"session"
+			],
+			[
+				"for",
+				"forof	Object Comprehension"
+			],
+			[
+				"se",
+				"sessions"
+			],
+			[
+				"target",
+				"targetidx"
+			],
+			[
+				"targ",
+				"targetidx"
+			],
+			[
+				"a",
+				"a	a()"
+			],
+			[
+				"mute_",
+				"mute_green"
+			],
+			[
+				"mu",
+				"mute_green"
+			],
+			[
+				"mute",
+				"mute_magenta"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"brig",
+				"bright_grey"
+			],
+			[
+				"gr",
+				"bright_grey"
+			],
+			[
+				"re",
+				"req	require"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"na",
+				"namespace"
+			],
+			[
+				"_direc",
+				"_directCall"
+			],
+			[
+				"con",
+				"condition"
+			],
+			[
+				"obj",
+				"objectType"
+			],
+			[
+				"dir",
+				"direction"
+			],
+			[
+				"dif",
+				"diffX"
+			],
+			[
+				"walk",
+				"walkDir"
+			],
+			[
+				"mixin",
+				"mixinSource"
+			],
+			[
+				"template",
+				"templateSource"
+			],
+			[
+				"temp",
+				"templateSource"
+			],
+			[
+				"templa",
+				"templateSource"
+			],
+			[
+				"labe",
+				"labelIdx"
+			],
+			[
+				"mi",
+				"mixin"
+			],
+			[
+				"get",
+				"getCount"
+			],
+			[
+				"reb",
+				"reubuildTimeout"
+			],
+			[
+				"req",
+				"req	require"
+			],
+			[
+				"uuid",
+				"node-uuid"
+			],
+			[
+				"no",
+				"node-uuid"
+			],
+			[
+				"socket",
+				"socket_io"
+			],
+			[
+				"sock",
+				"socket_io"
+			],
+			[
+				"nam",
+				"namespaces"
+			],
+			[
+				"dung",
+				"dungeon"
+			],
+			[
+				"mix",
+				"mixins"
+			],
+			[
+				"pre",
+				"preParsed"
+			],
+			[
+				"scrip",
+				"scriptMan"
+			],
+			[
+				"label",
+				"labelIdx"
+			],
+			[
+				"name",
+				"namespace"
+			],
+			[
+				"lis",
+				"listener"
+			],
+			[
+				"arra",
+				"arrayEval"
+			],
+			[
+				"dun",
+				"dungeonInventory"
+			],
+			[
+				"diff",
+				"diffY"
+			],
+			[
+				"arr",
+				"arrayEval"
+			],
+			[
+				"_reso",
+				"_resolveTarget"
+			],
+			[
+				"_",
+				"_directCall"
+			],
+			[
+				"_obj",
+				"_objectToDirection"
+			],
+			[
+				"else",
+				"elseSelector"
+			],
+			[
+				"fri",
+				"firstElement"
+			],
+			[
+				"opera",
+				"operator"
+			],
+			[
+				"operator",
+				"operators"
+			],
+			[
+				"ope",
+				"operands"
+			],
+			[
+				"operad",
+				"operands"
+			],
+			[
+				"or",
+				"origin"
+			],
+			[
+				"op",
+				"operand"
+			],
+			[
+				"operan",
+				"operand"
+			],
+			[
+				"any",
+				"anyTrue"
+			],
+			[
+				"sel",
+				"selection"
+			],
+			[
+				"oep",
+				"operators"
+			],
+			[
+				"isA",
+				"isAnyTrue"
+			],
+			[
+				"isa",
+				"isAnyTrue"
+			],
+			[
+				"the",
+				"then"
+			],
+			[
+				"is",
+				"isArray"
+			],
+			[
+				"create",
+				"createQueries"
+			],
+			[
+				"operna",
+				"operand"
+			],
+			[
+				"Arg",
+				"argIdx"
+			],
+			[
+				"arg",
+				"argName"
+			],
+			[
+				"comm",
+				"commandIdx"
+			],
+			[
+				"com",
+				"commandIdx"
+			],
+			[
+				"n",
+				"new"
+			],
+			[
+				"filter",
+				"filterProps"
+			],
+			[
+				"selec",
+				"selectionGroup"
+			],
+			[
+				"filte",
+				"filterProps"
+			],
+			[
+				"numeric",
+				"numericType"
+			],
+			[
+				"nu",
+				"number"
+			],
+			[
+				"num",
+				"numericType"
+			],
+			[
+				"qu",
+				"qualifiedProperty"
+			],
+			[
+				"random",
+				"randomNumber"
+			],
+			[
+				"s",
+				"selector"
+			],
+			[
+				"_is",
+				"_isValidQuery"
+			],
+			[
+				"co",
+				"ColorPalette"
+			],
+			[
+				"pa",
+				"Palette"
+			],
+			[
+				"draw",
+				"drawWallPreview"
+			],
+			[
+				"mo",
+				"Modal"
+			],
+			[
+				"set",
+				"setColor"
+			],
+			[
+				"sw",
+				"swi	Switch"
+			],
+			[
+				"up",
+				"updateSwatch"
+			],
+			[
+				"web",
+				"webkit-touch-callout"
+			],
+			[
+				"gre",
+				"greenSlider"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"swa",
+				"swatchSelected"
+			],
+			[
+				"hei",
+				"height"
+			],
+			[
+				"colo",
+				"colorpalette"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"ed",
+				"editScript"
+			],
+			[
+				"li",
+				"List"
+			],
+			[
+				"templ",
+				"Templates"
+			],
+			[
+				"to",
+				"toString"
+			],
+			[
+				"un",
+				"undefined"
+			],
+			[
+				"call",
+				"callback"
+			],
+			[
+				"nma",
+				"names"
+			],
+			[
+				"Edit",
+				"Editor"
+			],
+			[
+				"Editor",
+				"EditorView"
+			],
+			[
+				"colors",
+				"Colors"
+			],
+			[
+				"cons",
+				"controls"
+			],
+			[
+				"editor",
+				"Editor"
+			],
+			[
+				"el",
+				"element"
+			],
+			[
+				"sele",
+				"selectDialog"
+			],
+			[
+				"Wal",
+				"Wall"
+			],
+			[
+				"contr",
+				"controlName"
+			],
+			[
+				"f",
+				"forof	Object Comprehension"
+			],
+			[
+				"view",
+				"viewDefinition"
+			],
+			[
+				"zap",
+				"zapApp"
+			],
+			[
+				"build",
+				"buildMap"
+			],
+			[
+				"err",
+				"error"
+			],
+			[
+				"objec",
+				"objectType"
+			],
+			[
+				"pl",
+				"player"
+			],
+			[
+				"save",
+				"saveBoard"
+			],
+			[
+				"Ed",
+				"editTimer"
+			],
+			[
+				"clear",
+				"clearInterval"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "phaser.js",
+			"settings":
+			{
+				"buffer_size": 971234,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Gruntfile.coffee",
+			"settings":
+			{
+				"buffer_size": 369,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Evan/Documents/My Box Files/#zap/Gruntfile.coffee",
+			"settings":
+			{
+				"buffer_size": 816,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/User/Zap.sublime-build",
+	"command_palette":
+	{
+		"height": 58.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"te",
+				"Build: Test"
+			],
+			[
+				"tes",
+				"Build: Test"
+			],
+			[
+				"test",
+				"Build: Test"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 153.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": true,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Evan/Documents/GitHub/Bieb-Ar/package.json",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/Gruntfile.coffee",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/package.json",
+		"/C/Users/Evan/Documents/My Box Files/#zap/zap.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/package.json",
+		"/C/Users/Evan/Documents/My Box Files/#zap/README.md",
+		"/C/Users/Evan/Documents/My Box Files/#zap/readme.md",
+		"/C/Users/Evan/Documents/My Box Files/#zap/.gitignore",
+		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/Chat.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/Game.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/views/stylesheets/chat.styl",
+		"/C/Users/Evan/Documents/My Box Files/#zap/Cakefile",
+		"/C/Users/Evan/Documents/My Box Files/#zap/shared/ZapConstants.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/Web.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/Player.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/views/admin.jade",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/Server.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/views/stylesheets/admin.styl",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/Board.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/views/stylesheets/index.styl",
+		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/landing.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/views/newuser.jade",
+		"/C/Users/Evan/Documents/My Box Files/#zap/views/game.jade",
+		"/C/Users/Evan/Documents/My Box Files/#zap/views/stylesheets/style.styl",
+		"/C/Users/Evan/Documents/My Box Files/#zap/views/index.jade",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/Script/ZapScript.pegjs",
+		"/C/Users/Evan/Documents/My Box Files/#zap/public/index.html",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/Script/Query.coffee",
+		"/C/Users/Evan/AppData/Roaming/Sublime Text 3/Packages/User/Zap.sublime-build",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/Script/Manager.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/Script/Lex.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/test/board.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/ZapObject.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/Dungeon.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/Script/Parser.coffee",
+		"/C/Users/Evan/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Evan/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Evan/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/Evan/Documents/My Box Files/#zap/shared/Collide.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/UI/Editor.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/SocketHandler.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/DB.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/Instance.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/test/mocha.opts",
+		"/C/Users/Evan/Documents/My Box Files/#zap/test/object.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/BoardView.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/PlayerView.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/public/js/PlayerView.js",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/Script/PreParser.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/cs.js",
+		"/C/Users/Evan/Documents/My Box Files/#zap/spec/ObjectSpec.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/spec/Object.sut.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/spec/RequireCsSpec.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/spec/requirecs.sut.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/spec/ObjectSpec.sut.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/spec/RequireJsSpec.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/spec/DBSpec.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/zap.js",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/Query.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/spec/requirejs-setup.js",
+		"/C/Users/Evan/Documents/My Box Files/#zap/node_modules/jasmine-standalone/jasmine.js",
+		"/C/Users/Evan/Documents/My Box Files/#zap/shared/ZapScript.js",
+		"/C/Users/Evan/Documents/My Box Files/#zap/ZapScript.pegjs",
+		"/C/Users/Evan/Documents/My Box Files/#zap/views/stylesheets/editor.styl",
+		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/lib/widgets.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/lib/colorpalette.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/lib/smiley.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/UI/views/QuickPaletteView.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/UI/ScriptEdit.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/UI/views/ModalForms.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/views/index.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/UI/EditorView.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/public/js/lib/widgets.js",
+		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/controllers.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/public/js/controllers.js",
+		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/lib/ascii.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/zap-configuration.json",
+		"/C/Users/Evan/Documents/My Box Files/#zap/room-backup.json",
+		"/G/GitHub/ColoredLights/Server/Map.ts",
+		"/G/GitHub/ColoredLights/Server/Server.ts",
+		"/G/GitHub/ColoredLights/Server/DB.ts",
+		"/C/Users/Evan/AppData/Roaming/Sublime Text 3/Packages/Better CoffeeScript/CoffeeScript.sublime-settings",
+		"/C/Users/Evan/AppData/Roaming/Sublime Text 3/Packages/User/CoffeeScript.sublime-settings",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/Board.js",
+		"/E/Downloads/Manga Studio EX 5.0.2 Windows (keygen X-Force) [ChingLiu]/ChingLiu.Install.Notes.nfo",
+		"/C/Users/Evan2/Documents/My Box Files/#zap/PreParse.pegjs",
+		"/F/GitHub/NumberAce/NumberAce/game.js",
+		"/F/GitHub/ColoredLights/Client/Client.ts",
+		"/F/GitHub/NumberAce/NumberAce/graphics/block.svg",
+		"/F/GitHub/NumberAce/NumberAce/NumberAce.csproj",
+		"/F/GitHub/ColoredLights/Client/Client.csproj",
+		"/F/GitHub/ColoredLights/Client/Player.js",
+		"/E/Downloads/Ultimate/minecraft/config/GregTech/RecipesAdvancedConfig.cfg",
+		"/E/Downloads/Ultimate/minecraft/config/GregTech/GregTech.cfg",
+		"/F/GitHub/ColoredLights/Server/lights-config.json",
+		"/C/Users/Evan2/Documents/My Box Files/#zap/client_source/Game.coffee",
+		"/E/Downloads/Ultimate/minecraft/config/GregTech/Recipes.cfg",
+		"/E/Downloads/MindCrack/minecraft/config/GregTech/GregTech.cfg",
+		"/E/Downloads/MindCrack/minecraft/config/railcraft/railcraft.cfg",
+		"/E/Downloads/MindCrack/minecraft/config/GregTech/Recipes.cfg",
+		"/E/Downloads/MindCrack/minecraft/config/GregTech/RecipesAdvancedConfig.cfg",
+		"/E/Sony Online Entertainment/Installed Games/PlanetSide 2/UserOptions.ini",
+		"/F/minecraftforge-src-1.4.7-6.6.0.497/forge/mcp/temp/retroguard.cfg",
+		"/F/minecraftforge-src-1.4.7-6.6.0.497/forge/mcp/temp/server_rg.cfg",
+		"/F/minecraftforge-src-1.4.7-6.6.0.497/forge/mcp/temp/minecraft_rg.jar",
+		"/F/minecraftforge-src-1.4.7-6.6.0.497/forge/mcp/temp/client_rg.cfg",
+		"/F/minecraftforge-src-1.4.7-6.6.0.497/forge/mcp/conf/mcp.cfg",
+		"/F/Monsters/index.html",
+		"/F/GitHub/Monsters/src/com/cambrianman/monsters/levels/rider.tmx",
+		"/F/GitHub/Monsters/src/com/cambrianman/monsters/levels/lostWoods.tmx",
+		"/F/GitHub/Monsters/src/com/cambrianman/monsters/levels/tiles.tsx",
+		"/F/GitHub/Monsters/src/com/cambrianman/monsters/levels/start.tmx",
+		"/C/Users/Evan2/Documents/Monsters/.gitignore",
+		"/C/Users/Evan2/Documents/My Box Files/Monsters/src/com/cambrianman/monsters/levels/test2.tmx",
+		"/C/Users/Evan2/Documents/My Box Files/Monsters/src/com/cambrianman/monsters/levels/test.tmx",
+		"/C/Users/Evan2/Documents/My Box Files/Monsters/.gitignore",
+		"/C/Users/Evan2/Documents/Monsters/.git/config",
+		"/E/Downloads/MindCrack/minecraft/config/ChickenChunks.cfg",
+		"/E/Downloads/MindCrack/minecraft/config/NEI.cfg",
+		"/E/Downloads/MindCrack/minecraft/config/ComputerCraft.cfg",
+		"/C/Program Files (x86)/FlashDevelop/Tools/flexsdk/bin/jvm.config",
+		"/C/Users/Evan2/Documents/My Box Files/Monsters/src/com/cambrianman/monsters/levels/test-zipped.tmx",
+		"/C/Users/Evan2/Documents/InventoryProgram.lua",
+		"/E/Downloads/MindCrack/minecraft/config/railcraft/modules.cfg",
+		"/C/Users/Evan2/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Pro Motion 6.5/Pro Motion 6.5.lnk",
+		"/C/Users/Evan2/Documents/readme.txt",
+		"/C/Users/Evan2/Documents/My Box Files/#zap/public/stylesheets/editor.css",
+		"/C/Users/Evan2/Documents/My Box Files/Dungeon Party/deck.coffee"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ck.",
+			"console.log",
+			"method",
+			"triggers",
+			"evaluate",
+			"setscript",
+			"evaluate",
+			"@board",
+			"winston.",
+			"console.error",
+			"winston.",
+			"winston.error",
+			"error",
+			"__dirname",
+			"Lex",
+			"__trueDir",
+			"console.log",
+			"else",
+			"ctor",
+			"getItems",
+			"console.log",
+			"properties",
+			"glyphs",
+			"console",
+			"putchar",
+			"Zap.tiles",
+			"tiles",
+			"board.tiles",
+			"@tiles",
+			"@widgets",
+			"Widgets",
+			"game",
+			"Editor",
+			"setmo",
+			"mode",
+			"Zap.board",
+			"console.log",
+			"console.log err",
+			"console",
+			"@boardSaveInterval",
+			"expensive",
+			"anon",
+			"selector:(selector / anon)",
+			"anon",
+			"line",
+			"command",
+			"boardsave",
+			"counters",
+			",",
+			"1001400",
+			"thisServer",
+			"z.",
+			"gameServer",
+			"Engine.pixels",
+			"s."
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"console.",
+			"console.error",
+			"__webPath",
+			"__dirname",
+			"Zap.board.tiles",
+			"@controls",
+			"widgets",
+			"Zap.mode",
+			"selector:selector",
+			"labelIdx",
+			"/n",
+			"handler",
+			"@",
+			"gameServer",
+			"Engine.buffer",
+			"e."
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "phaser.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 971234,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Gruntfile.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 369,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								218,
+								218
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Users/Evan/Documents/My Box Files/#zap/Gruntfile.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 816,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								816,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 186.0
+	},
+	"project": "Bieb-ar.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 183.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
