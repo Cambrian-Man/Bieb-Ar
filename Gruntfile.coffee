@@ -5,8 +5,13 @@ module.exports = (grunt) ->
   grunt.initConfig
     coffee:
       compile:
-        files:
-          'game.js' : ['source/*.coffee']
+        expand: true
+        cwd: 'source/'
+        src: ['**/*.coffee']
+        dest: 'js/'
+        ext: '.js'
+        options:
+          sourceMap: true
 
     watch:
       coffee:
