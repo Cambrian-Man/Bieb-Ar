@@ -14,6 +14,7 @@ class Ar.PlayState extends Phaser.State
     @camera.follow @player
 
   render: ->
+    # Ar.Game.debug.renderSpriteBody(@player);
     super()
 
   preload: ->

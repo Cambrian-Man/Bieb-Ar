@@ -9,6 +9,10 @@ class Ar.Player extends Phaser.Sprite
     @runSpeed = 80
     @jumpSpeed = -200
 
+    @body.width = 24
+    @body.height = 58
+    @body.offset.y = 6
+
     @keys = Ar.Game.input.keyboard.createCursorKeys()
     @inputEnabled = true
 

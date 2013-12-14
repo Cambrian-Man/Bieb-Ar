@@ -13,6 +13,9 @@
       this.anchor.setTo(0.5, 0);
       this.runSpeed = 80;
       this.jumpSpeed = -200;
+      this.body.width = 24;
+      this.body.height = 58;
+      this.body.offset.y = 6;
       this.keys = Ar.Game.input.keyboard.createCursorKeys();
       this.inputEnabled = true;
     }
