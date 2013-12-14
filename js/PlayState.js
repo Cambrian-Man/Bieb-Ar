@@ -12,7 +12,7 @@
 
     PlayState.prototype.create = function() {
       this.loadMap('tiles', 'screen1');
-      Ar.Game.physics.gravity = new Phaser.Point(0, 5);
+      Ar.Game.physics.gravity = new Phaser.Point(0, 10);
       this.player = new Ar.Player(Ar.Game, 128, 128);
       this.add.existing(this.player);
       return this.camera.follow(this.player);
@@ -38,7 +38,7 @@
       this.map = this.add.tilemap(map);
       this.tileset = this.add.tileset(tiles);
       this.tileset.setCollisionRange(1, 2, true, true, true, true);
-      this.tileset.setCollision(13, true, true, true, true);
+      this.tileset.setCollision(12, true, true, true, true);
       this.background = this.add.tilemapLayer(0, 0, 400, 300, this.tileset, this.map, 0);
       this.walls = this.add.tilemapLayer(0, 0, 400, 300, this.tileset, this.map, 1);
       return this.walls.resizeWorld();

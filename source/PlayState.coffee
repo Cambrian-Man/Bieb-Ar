@@ -6,7 +6,7 @@ class Ar.PlayState extends Phaser.State
   create: ->
     @loadMap 'tiles', 'screen1'
 
-    Ar.Game.physics.gravity = new Phaser.Point 0, 5
+    Ar.Game.physics.gravity = new Phaser.Point 0, 10
 
     @player = new Ar.Player Ar.Game, 128, 128
     @add.existing @player
@@ -35,7 +35,7 @@ class Ar.PlayState extends Phaser.State
     @map = @add.tilemap map
     @tileset = @add.tileset tiles
     @tileset.setCollisionRange 1, 2, true, true, true, true
-    @tileset.setCollision 13, true, true, true, true
+    @tileset.setCollision 12, true, true, true, true
 
     @background = @add.tilemapLayer 0, 0, 400, 300, @tileset, @map, 0
 
