@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"re",
+				"render"
+			],
+			[
 				"inp",
 				"inputBox"
 			],
@@ -74,10 +78,6 @@
 			[
 				"gr",
 				"bright_grey"
-			],
-			[
-				"re",
-				"req	require"
 			],
 			[
 				"res",
@@ -520,26 +520,42 @@
 	"buffers":
 	[
 		{
-			"file": "phaser.js",
-			"settings":
-			{
-				"buffer_size": 971234,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "Gruntfile.coffee",
 			"settings":
 			{
-				"buffer_size": 369,
+				"buffer_size": 467,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/Users/Evan/Documents/My Box Files/#zap/Gruntfile.coffee",
+			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 816,
+				"buffer_size": 379,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/PlayState.coffee",
+			"settings":
+			{
+				"buffer_size": 517,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/Player.coffee",
+			"settings":
+			{
+				"buffer_size": 122,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/Game.coffee",
+			"settings":
+			{
+				"buffer_size": 114,
 				"line_ending": "Windows"
 			}
 		}
@@ -600,8 +616,16 @@
 	},
 	"file_history":
 	[
-		"/C/Users/Evan/Documents/GitHub/Bieb-Ar/package.json",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/src/PlayState.coffee",
+		"/C/Users/Evan/Documents/GitHub/Bieb-Ar/js/PlayState.js",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/game/game.js",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/src/game.coffee",
 		"/C/Users/Evan/Documents/GitHub/WonderZone/Gruntfile.coffee",
+		"/C/Users/Evan/Documents/GitHub/Bieb-Ar/source/Game.coffee",
+		"/C/Users/Evan/AppData/Roaming/Sublime Text 3/Packages/User/CoffeeScript.sublime-settings",
+		"/C/Users/Evan/Documents/GitHub/Bieb-Ar/js/game.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/Gruntfile.coffee",
+		"/C/Users/Evan/Documents/GitHub/Bieb-Ar/package.json",
 		"/C/Users/Evan/Documents/GitHub/WonderZone/package.json",
 		"/C/Users/Evan/Documents/My Box Files/#zap/zap.coffee",
 		"/C/Users/Evan/Documents/My Box Files/#zap/package.json",
@@ -682,7 +706,6 @@
 		"/G/GitHub/ColoredLights/Server/Server.ts",
 		"/G/GitHub/ColoredLights/Server/DB.ts",
 		"/C/Users/Evan/AppData/Roaming/Sublime Text 3/Packages/Better CoffeeScript/CoffeeScript.sublime-settings",
-		"/C/Users/Evan/AppData/Roaming/Sublime Text 3/Packages/User/CoffeeScript.sublime-settings",
 		"/C/Users/Evan/Documents/My Box Files/#zap/server/Board.js",
 		"/E/Downloads/Manga Studio EX 5.0.2 Windows (keygen X-Force) [ChingLiu]/ChingLiu.Install.Notes.nfo",
 		"/C/Users/Evan2/Documents/My Box Files/#zap/PreParse.pegjs",
@@ -720,14 +743,7 @@
 		"/E/Downloads/MindCrack/minecraft/config/ChickenChunks.cfg",
 		"/E/Downloads/MindCrack/minecraft/config/NEI.cfg",
 		"/E/Downloads/MindCrack/minecraft/config/ComputerCraft.cfg",
-		"/C/Program Files (x86)/FlashDevelop/Tools/flexsdk/bin/jvm.config",
-		"/C/Users/Evan2/Documents/My Box Files/Monsters/src/com/cambrianman/monsters/levels/test-zipped.tmx",
-		"/C/Users/Evan2/Documents/InventoryProgram.lua",
-		"/E/Downloads/MindCrack/minecraft/config/railcraft/modules.cfg",
-		"/C/Users/Evan2/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Pro Motion 6.5/Pro Motion 6.5.lnk",
-		"/C/Users/Evan2/Documents/readme.txt",
-		"/C/Users/Evan2/Documents/My Box Files/#zap/public/stylesheets/editor.css",
-		"/C/Users/Evan2/Documents/My Box Files/Dungeon Party/deck.coffee"
+		"/C/Program Files (x86)/FlashDevelop/Tools/flexsdk/bin/jvm.config"
 	],
 	"find":
 	{
@@ -833,30 +849,31 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "phaser.js",
-					"semi_transient": true,
+					"file": "Gruntfile.coffee",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 971234,
+						"buffer_size": 467,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								272,
+								272
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -866,19 +883,46 @@
 				},
 				{
 					"buffer": 1,
-					"file": "Gruntfile.coffee",
+					"file": "index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 369,
+						"buffer_size": 379,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								218,
-								218
+								250,
+								250
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "source/PlayState.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 517,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								517,
+								517
 							]
 						],
 						"settings":
@@ -894,27 +938,52 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "/C/Users/Evan/Documents/My Box Files/#zap/Gruntfile.coffee",
+					"buffer": 3,
+					"file": "source/Player.coffee",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 816,
+						"buffer_size": 122,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								816,
-								0
+								86,
+								86
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "source/Game.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 114,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								54,
+								54
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
