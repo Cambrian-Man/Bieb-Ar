@@ -15,7 +15,7 @@
       this.backdrop = this.add.tileSprite(0, 0, 400, 300, 'backdrop');
       this.backdrop.body.allowGravity = false;
       this.backdrop.fixedToCamera = true;
-      this.loadMap('tiles', 'screen1');
+      this.loadMap('tiles', 'screen2');
       Ar.Game.physics.gravity = new Phaser.Point(0, 10);
       this.player = new Ar.Player(Ar.Game, 128, 128);
       this.add.existing(this.player);
@@ -55,11 +55,12 @@
       Ar.Game.stage.scale.maxHeight = 600;
       Ar.Game.stage.scale.setSize();
       Ar.Game.stage.scale.refresh();
-      Ar.Game.load.image('player', 'assets/graphics/player.png');
+      Ar.Game.load.atlasXML('player', 'assets/graphics/player.png', 'assets/graphics/player.xml');
       Ar.Game.load.image('fireball', 'assets/graphics/fireball.png');
       Ar.Game.load.image('backdrop', 'assets/graphics/backdrop.png');
       Ar.Game.load.tileset('tiles', 'assets/graphics/tiles.png', 48, 48);
-      return Ar.Game.load.tilemap('screen1', 'assets/levels/screen1.json', null, Phaser.Tilemap.TILED_JSON);
+      Ar.Game.load.tilemap('screen1', 'assets/levels/screen1.json', null, Phaser.Tilemap.TILED_JSON);
+      return Ar.Game.load.tilemap('screen2', 'assets/levels/screen2.json', null, Phaser.Tilemap.TILED_JSON);
     };
 
     PlayState.prototype.loadMap = function(tiles, map) {

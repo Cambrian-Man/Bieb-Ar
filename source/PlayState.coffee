@@ -8,7 +8,7 @@ class Ar.PlayState extends Phaser.State
     @backdrop.body.allowGravity = false
     @backdrop.fixedToCamera = true
 
-    @loadMap 'tiles', 'screen1'
+    @loadMap 'tiles', 'screen2'
 
     Ar.Game.physics.gravity = new Phaser.Point 0, 10
 
@@ -43,12 +43,13 @@ class Ar.PlayState extends Phaser.State
     Ar.Game.stage.scale.setSize()
     Ar.Game.stage.scale.refresh()
 
-    Ar.Game.load.image 'player', 'assets/graphics/player.png'
+    Ar.Game.load.atlasXML 'player', 'assets/graphics/player.png', 'assets/graphics/player.xml'
     Ar.Game.load.image 'fireball', 'assets/graphics/fireball.png'
     Ar.Game.load.image 'backdrop', 'assets/graphics/backdrop.png'
 
     Ar.Game.load.tileset 'tiles', 'assets/graphics/tiles.png', 48, 48
     Ar.Game.load.tilemap 'screen1', 'assets/levels/screen1.json', null, Phaser.Tilemap.TILED_JSON
+    Ar.Game.load.tilemap 'screen2', 'assets/levels/screen2.json', null, Phaser.Tilemap.TILED_JSON
 
   loadMap: (tiles, map) ->
     @map = @add.tilemap map
