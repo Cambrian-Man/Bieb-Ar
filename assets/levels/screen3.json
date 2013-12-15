@@ -36,7 +36,7 @@
                  "type":"right",
                  "visible":true,
                  "width":36,
-                 "x":48,
+                 "x":96,
                  "y":264
                 }, 
                 {
@@ -133,6 +133,19 @@
                  "width":48,
                  "x":1392,
                  "y":192
+                }, 
+                {
+                 "height":144,
+                 "name":"exit",
+                 "properties":
+                    {
+
+                    },
+                 "type":"screen4",
+                 "visible":true,
+                 "width":48,
+                 "x":1872,
+                 "y":48
                 }],
          "opacity":1,
          "type":"objectgroup",

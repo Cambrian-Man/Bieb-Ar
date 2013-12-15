@@ -15,7 +15,7 @@
       this.backdrop.body.allowGravity = false;
       this.backdrop.fixedToCamera = true;
       this.player = new Ar.Player(Ar.Game, 128, 128);
-      this.loadMap('tiles', 'screen4');
+      this.loadMap('tiles', 'screen3');
       Ar.Game.physics.gravity = new Phaser.Point(0, 10);
       this.add.existing(this.player);
       this.camera.follow(this.player);
@@ -142,12 +142,12 @@
       Ar.Game.physics.collide(this.enemies, this.walls);
       Ar.Game.physics.overlap(this.player, this.fireballs, function(player) {
         if (!player.invincible) {
-          return player.respawn();
+          return player.kill();
         }
       }, null, this);
       Ar.Game.physics.overlap(this.player, this.enemies, function(player) {
         if (!player.invincible) {
-          return player.respawn();
+          return player.kill();
         }
       }, null, this);
       Ar.Game.physics.collide(this.fireballs, this.walls, function(fireball) {

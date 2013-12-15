@@ -21,7 +21,11 @@
       this.worldThreshold = 100;
       this.invincible = false;
       this.events.onKilled.add(function() {
-        return this.respawn();
+        if (Ar.Asshole) {
+          return Ar.Game.state.states[Ar.Game.state.current].changeMap('screen1');
+        } else {
+          return this.respawn();
+        }
       }, this);
       this.anchor.setTo(0.5, 0.5);
       this.body.width = 24;

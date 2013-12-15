@@ -19,7 +19,10 @@ class Ar.Player extends Phaser.Sprite
     @invincible = false
 
     @events.onKilled.add ->
-      @respawn()
+      if Ar.Asshole
+        Ar.Game.state.states[Ar.Game.state.current].changeMap 'screen1'
+      else
+        @respawn()
     , @
 
     @anchor.setTo 0.5, 0.5

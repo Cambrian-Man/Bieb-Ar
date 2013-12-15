@@ -151,7 +151,7 @@
                  "y":528
                 }, 
                 {
-                 "height":72,
+                 "height":48,
                  "name":"squid",
                  "properties":
                     {
@@ -159,9 +159,9 @@
                     },
                  "type":"",
                  "visible":true,
-                 "width":72,
-                 "x":528,
-                 "y":360
+                 "width":48,
+                 "x":576,
+                 "y":384
                 }],
          "opacity":1,
          "type":"objectgroup",

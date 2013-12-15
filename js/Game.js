@@ -5,6 +5,8 @@
 
   Ar.Game = new Phaser.Game(400, 300, Phaser.AUTO, 'bieb-ar', new Ar.PlayState(), false, false);
 
+  Ar.Asshole = false;
+
 }).call(this);
 
 /*

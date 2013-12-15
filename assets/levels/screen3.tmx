@@ -32,7 +32,7 @@
 </data>
  </layer>
  <objectgroup name="Objects" width="40" height="10">
-  <object name="start" type="right" x="48" y="264" width="36" height="72"/>
+  <object name="start" type="right" x="96" y="264" width="36" height="72"/>
   <object name="squid" x="1200" y="192" width="72" height="72"/>
   <object name="fireball" type="up" x="624" y="336" width="48" height="48">
    <properties>
@@ -60,5 +60,6 @@
     <property name="timer" value="3000"/>
    </properties>
   </object>
+  <object name="exit" type="screen4" x="1872" y="48" width="48" height="144"/>
  </objectgroup>
 </map>

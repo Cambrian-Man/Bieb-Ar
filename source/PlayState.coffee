@@ -10,7 +10,7 @@ class Ar.PlayState extends Phaser.State
 
     @player = new Ar.Player Ar.Game, 128, 128
 
-    @loadMap 'tiles', 'screen4'
+    @loadMap 'tiles', 'screen3'
 
     Ar.Game.physics.gravity = new Phaser.Point 0, 10
  
@@ -130,11 +130,11 @@ class Ar.PlayState extends Phaser.State
     Ar.Game.physics.collide @enemies, @walls
 
     Ar.Game.physics.overlap @player, @fireballs, (player) ->
-      if not player.invincible then player.respawn()
+      if not player.invincible then player.kill()
     , null, @
 
     Ar.Game.physics.overlap @player, @enemies, (player) ->
-      if not player.invincible then player.respawn()
+      if not player.invincible then player.kill()
     , null, @
 
     Ar.Game.physics.collide @fireballs, @walls, (fireball) ->
