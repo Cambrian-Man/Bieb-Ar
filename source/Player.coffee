@@ -24,15 +24,25 @@ class Ar.Player extends Phaser.Sprite
 
     @start = new Phaser.Point()
 
+    @animations.add 'stand', ['player_1']
+    @animations.add 'walk', ['player_0', 'player_1', 'player_2', 'player_3'], 6, true
+    @animations.add 'jump', ['player_4']
+
   preUpdate: ->
     if @keys.right.isDown
       @body.velocity.x = @runSpeed
       @scale.x = 1
+      @play 'walk'
     else if @keys.left.isDown
       @body.velocity.x = -@runSpeed
       @scale.x = -1
+      @play 'walk'
     else
       @body.velocity.x = 0
+      @play 'stand'
+
+    if not @body.touching.down
+      @play 'jump'
 
     if Ar.Game.input.keyboard.justPressed 88, 250 and @body.touching.down
       @body.velocity.y = @jumpSpeed

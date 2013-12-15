@@ -24,17 +24,26 @@
       this.inputEnabled = true;
       this.keys = Ar.Game.input.keyboard.createCursorKeys();
       this.start = new Phaser.Point();
+      this.animations.add('stand', ['player_1']);
+      this.animations.add('walk', ['player_0', 'player_1', 'player_2', 'player_3'], 6, true);
+      this.animations.add('jump', ['player_4']);
     }
 
     Player.prototype.preUpdate = function() {
       if (this.keys.right.isDown) {
         this.body.velocity.x = this.runSpeed;
         this.scale.x = 1;
+        this.play('walk');
       } else if (this.keys.left.isDown) {
         this.body.velocity.x = -this.runSpeed;
         this.scale.x = -1;
+        this.play('walk');
       } else {
         this.body.velocity.x = 0;
+        this.play('stand');
+      }
+      if (!this.body.touching.down) {
+        this.play('jump');
       }
       if (Ar.Game.input.keyboard.justPressed(88, 250 && this.body.touching.down)) {
         this.body.velocity.y = this.jumpSpeed;
