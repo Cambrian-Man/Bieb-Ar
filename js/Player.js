@@ -12,17 +12,18 @@
       Player.__super__.constructor.call(this, game, x, y, 'player');
       this.enteringCheat = false;
       this.cheatKey = '';
-      this.cheatCode = [];
+      this.cheatCode = null;
       this.cheatStart = -1;
       this.cheatDuration = 3000;
-      this.anchor.setTo(0.5, 0);
       this.runSpeed = 80;
       this.jumpSpeed = -275;
+      this.anchor.setTo(0.5, 0);
       this.body.width = 24;
       this.body.height = 58;
       this.body.offset.y = 6;
       this.inputEnabled = true;
       this.keys = Ar.Game.input.keyboard.createCursorKeys();
+      this.start = new Phaser.Point();
     }
 
     Player.prototype.preUpdate = function() {
@@ -43,7 +44,7 @@
         if (this.enteringCheat) {
           this.enterCheat();
         } else {
-          this.cheatCode = [];
+          this.cheatCode = null;
         }
       } else {
         if (Date.now() - this.cheatStart > this.cheatDuration) {
@@ -54,41 +55,54 @@
     };
 
     Player.prototype.enterCheat = function() {
-      var cheatString;
-      if (this.keys.up.justPressed(100)) {
+      var cheatString, _ref;
+      if (this.keys.up.justPressed(250)) {
         this.cheatKey = 'up';
-      } else if (this.keys.down.justPressed(100)) {
+      } else if (this.keys.down.justPressed(250)) {
         this.cheatKey = 'down';
-      } else if (this.keys.right.justPressed(100)) {
+      } else if (this.keys.right.justPressed(250)) {
         this.cheatKey = 'right';
-      } else if (this.keys.left.justPressed(100)) {
+      } else if (this.keys.left.justPressed(250)) {
         this.cheatKey = 'left';
       }
       if (this.cheatKey === 'up' && this.keys.up.justReleased(100)) {
+        if (this.cheatCode == null) {
+          this.cheatCode = [];
+        }
         this.cheatCode.push(this.cheatKey);
         this.cheatKey = '';
       } else if (this.cheatKey === 'down' && this.keys.down.justReleased(100)) {
+        if (this.cheatCode == null) {
+          this.cheatCode = [];
+        }
         this.cheatCode.push(this.cheatKey);
         this.cheatKey = '';
       } else if (this.cheatKey === 'right' && this.keys.right.justReleased(100)) {
+        if (this.cheatCode == null) {
+          this.cheatCode = [];
+        }
         this.cheatCode.push(this.cheatKey);
         this.cheatKey = '';
       } else if (this.cheatKey === 'left' && this.keys.left.justReleased(100)) {
+        if (this.cheatCode == null) {
+          this.cheatCode = [];
+        }
         this.cheatCode.push(this.cheatKey);
         this.cheatKey = '';
       }
-      if (this.cheatCode.length === 4) {
+      if (((_ref = this.cheatCode) != null ? _ref.length : void 0) === 4) {
         cheatString = this.cheatCode.join('');
+        console.log(cheatString);
         if (cheatString === 'upupupup') {
           this.cheat = this.cheats['superJump'];
-        } else if (cheatString === 'leftrightleftright' || cheatString === 'rightleftrightleft') {
+        } else if (cheatString === 'leftleftleftleft' || cheatString === 'rightrightrightright') {
           this.cheat = this.cheats['superSpeed'];
         }
         if (this.cheat != null) {
           this.cheat.enter.call(this);
           this.cheatStart = Date.now();
         }
-        return this.cheatCode = [];
+        return this.cheatCode = null;
       }
     };
 
@@ -113,6 +127,10 @@
           return this.cheat = null;
         }
       }
+    };
+
+    Player.prototype.respawn = function() {
+      return this.reset(this.start.x, this.start.y);
     };
 
     return Player;

@@ -6,15 +6,14 @@ class Ar.Player extends Phaser.Sprite
 
     @enteringCheat = false
     @cheatKey = ''
-    @cheatCode = []
+    @cheatCode = null
     @cheatStart = -1
     @cheatDuration = 3000
-
-    @anchor.setTo 0.5, 0
 
     @runSpeed = 80
     @jumpSpeed = -275
 
+    @anchor.setTo 0.5, 0
     @body.width = 24
     @body.height = 58
     @body.offset.y = 6
@@ -22,6 +21,8 @@ class Ar.Player extends Phaser.Sprite
     @inputEnabled = true
 
     @keys = Ar.Game.input.keyboard.createCursorKeys()
+
+    @start = new Phaser.Point()
 
   preUpdate: ->
     if @keys.right.isDown
@@ -42,7 +43,7 @@ class Ar.Player extends Phaser.Sprite
       if @enteringCheat
         @enterCheat()
       else
-        @cheatCode = []
+        @cheatCode = null
     else
       if Date.now() - @cheatStart > @cheatDuration
         @cheat.exit.call @
@@ -50,41 +51,46 @@ class Ar.Player extends Phaser.Sprite
     super()
 
   enterCheat: ->
-    if @keys.up.justPressed 100
+    if @keys.up.justPressed 250
       @cheatKey = 'up'
-    else if @keys.down.justPressed 100
+    else if @keys.down.justPressed 250
       @cheatKey = 'down'
-    else if @keys.right.justPressed 100
+    else if @keys.right.justPressed 250
       @cheatKey = 'right'
-    else if @keys.left.justPressed 100
+    else if @keys.left.justPressed 250
       @cheatKey = 'left'
 
     if @cheatKey is 'up' and @keys.up.justReleased 100
+      @cheatCode ?= []
       @cheatCode.push @cheatKey
       @cheatKey = ''
     else if @cheatKey is 'down' and @keys.down.justReleased 100
+      @cheatCode ?= []
       @cheatCode.push @cheatKey
       @cheatKey = ''
     else if @cheatKey is 'right' and @keys.right.justReleased 100
+      @cheatCode ?= []
       @cheatCode.push @cheatKey
       @cheatKey = ''
     else if @cheatKey is 'left' and @keys.left.justReleased 100
+      @cheatCode ?= []
       @cheatCode.push @cheatKey
       @cheatKey = ''
 
-    if @cheatCode.length is 4
+    if @cheatCode?.length is 4
       cheatString = @cheatCode.join('')
+      console.log cheatString
 
       if cheatString is 'upupupup'
         @cheat = @cheats['superJump']
-      else if cheatString is 'leftrightleftright' or cheatString is 'rightleftrightleft'
+      else if cheatString is 'leftleftleftleft' or cheatString is 'rightrightrightright'
         @cheat = @cheats['superSpeed']
 
       if @cheat?
         @cheat.enter.call @
         @cheatStart = Date.now()
 
-      @cheatCode = []
+      @cheatCode = null
 
   cheats:
     superJump:
@@ -104,3 +110,6 @@ class Ar.Player extends Phaser.Sprite
       exit: ->
         @runSpeed = 80
         @cheat = null
+
+  respawn: ->
+    @reset @start.x, @start.y

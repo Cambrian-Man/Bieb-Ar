@@ -11,11 +11,33 @@
     function PlayState() {}
 
     PlayState.prototype.create = function() {
+      var object, spawner, _i, _len, _ref, _results;
       this.loadMap('tiles', 'screen1');
       Ar.Game.physics.gravity = new Phaser.Point(0, 10);
       this.player = new Ar.Player(Ar.Game, 128, 128);
       this.add.existing(this.player);
-      return this.camera.follow(this.player);
+      this.camera.follow(this.player);
+      this.fireballs = this.add.group();
+      this.fireballSpawners = [];
+      _ref = this.data.data.layers[2].objects;
+      _results = [];
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        object = _ref[_i];
+        switch (object.name) {
+          case 'start':
+            this.player.start.setTo(object.x, object.y + 6);
+            _results.push(this.player.respawn());
+            break;
+          case 'fireball':
+            spawner = new Ar.FireballSpawner(object.x, object.y, object.type, Number(object.properties.timer), Number(object.properties.offset), this.fireballs);
+            this.fireballSpawners.push(spawner);
+            _results.push(spawner.start());
+            break;
+          default:
+            _results.push(void 0);
+        }
+      }
+      return _results;
     };
 
     PlayState.prototype.render = function() {
@@ -30,6 +52,7 @@
       Ar.Game.stage.scale.setSize();
       Ar.Game.stage.scale.refresh();
       Ar.Game.load.image('player', 'assets/graphics/player.png');
+      Ar.Game.load.image('fireball', 'assets/graphics/fireball.png');
       Ar.Game.load.tileset('tiles', 'assets/graphics/tiles.png', 48, 48);
       return Ar.Game.load.tilemap('screen1', 'assets/levels/screen1.json', null, Phaser.Tilemap.TILED_JSON);
     };
@@ -38,14 +61,31 @@
       this.map = this.add.tilemap(map);
       this.tileset = this.add.tileset(tiles);
       this.tileset.setCollisionRange(1, 2, true, true, true, true);
+      this.tileset.setCollision(10, true, true, true, true);
       this.tileset.setCollision(12, true, true, true, true);
       this.background = this.add.tilemapLayer(0, 0, 400, 300, this.tileset, this.map, 0);
       this.walls = this.add.tilemapLayer(0, 0, 400, 300, this.tileset, this.map, 1);
-      return this.walls.resizeWorld();
+      this.walls.resizeWorld();
+      return this.data = Ar.Game.cache.getTilemapData(map);
     };
 
     PlayState.prototype.update = function() {
-      return Ar.Game.physics.collide(this.player, this.walls);
+      var spawner, _i, _len, _ref;
+      _ref = this.fireballSpawners;
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        spawner = _ref[_i];
+        spawner.update();
+      }
+      Ar.Game.physics.collide(this.player, this.walls);
+      Ar.Game.physics.collide(this.player);
+      Ar.Game.physics.collide(this.player, this.fireballs, function(player) {
+        player.respawn();
+        return false;
+      }, null, this);
+      return Ar.Game.physics.collide(this.fireballs, this.walls, function(fireball) {
+        console.log(fireball);
+        return fireball.kill();
+      }, null, this);
     };
 
     return PlayState;

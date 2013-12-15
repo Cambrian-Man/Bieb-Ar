@@ -13,6 +13,18 @@ class Ar.PlayState extends Phaser.State
 
     @camera.follow @player
 
+    @fireballs = @add.group()
+    @fireballSpawners = []
+    for object in @data.data.layers[2].objects
+      switch object.name
+        when 'start'
+          @player.start.setTo object.x, object.y + 6
+          @player.respawn()
+        when 'fireball'
+          spawner = new Ar.FireballSpawner object.x, object.y, object.type, Number(object.properties.timer), Number(object.properties.offset), @fireballs
+          @fireballSpawners.push spawner
+          spawner.start()
+
   render: ->
     # Ar.Game.debug.renderSpriteBody(@player);
     super()
@@ -27,6 +39,7 @@ class Ar.PlayState extends Phaser.State
     Ar.Game.stage.scale.refresh()
 
     Ar.Game.load.image 'player', 'assets/graphics/player.png'
+    Ar.Game.load.image 'fireball', 'assets/graphics/fireball.png'
 
     Ar.Game.load.tileset 'tiles', 'assets/graphics/tiles.png', 48, 48
     Ar.Game.load.tilemap 'screen1', 'assets/levels/screen1.json', null, Phaser.Tilemap.TILED_JSON
@@ -35,6 +48,7 @@ class Ar.PlayState extends Phaser.State
     @map = @add.tilemap map
     @tileset = @add.tileset tiles
     @tileset.setCollisionRange 1, 2, true, true, true, true
+    @tileset.setCollision 10, true, true, true, true
     @tileset.setCollision 12, true, true, true, true
 
     @background = @add.tilemapLayer 0, 0, 400, 300, @tileset, @map, 0
@@ -43,5 +57,22 @@ class Ar.PlayState extends Phaser.State
 
     @walls.resizeWorld()
 
+    @data = Ar.Game.cache.getTilemapData map
+
   update: ->
+    for spawner in @fireballSpawners
+      spawner.update()
+
     Ar.Game.physics.collide @player, @walls
+
+    Ar.Game.physics.collide @player
+
+    Ar.Game.physics.collide @player, @fireballs, (player) ->
+      player.respawn()
+      return false
+    , null, @
+
+    Ar.Game.physics.collide @fireballs, @walls, (fireball) ->
+      console.log fireball
+      fireball.kill()
+    , null, @
