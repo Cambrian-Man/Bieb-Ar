@@ -73,6 +73,5 @@ class Ar.PlayState extends Phaser.State
     , null, @
 
     Ar.Game.physics.collide @fireballs, @walls, (fireball) ->
-      console.log fireball
       fireball.kill()
     , null, @

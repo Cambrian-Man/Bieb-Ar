@@ -83,7 +83,6 @@
         return false;
       }, null, this);
       return Ar.Game.physics.collide(this.fireballs, this.walls, function(fireball) {
-        console.log(fireball);
         return fireball.kill();
       }, null, this);
     };
