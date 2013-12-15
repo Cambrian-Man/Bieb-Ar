@@ -25,3 +25,12 @@ class Ar.Fireball extends Phaser.Sprite
   spawn: ->
     @reset @start.x, @start.y
     @body.velocity.y = -150
+
+class Ar.Squid extends Phaser.Sprite
+  constructor: (x, y) ->
+    super(Ar.Game, x, y, 'squid')
+
+class Ar.Exit extends Phaser.Sprite
+  constructor: (x, y, width, height, @target) ->
+    super(Ar.Game, x, y, new Phaser.BitmapData(Ar.Game, width, height))
+    @body.allowGravity = false

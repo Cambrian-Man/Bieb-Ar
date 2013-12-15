@@ -42,7 +42,7 @@
 </data>
  </layer>
  <objectgroup name="Objects" width="30" height="15">
-  <object name="start" x="96" y="360" width="36" height="72"/>
+  <object name="start" type="right" x="96" y="360" width="36" height="72"/>
   <object name="fireball" type="up" x="1008" y="672" width="48" height="48">
    <properties>
     <property name="offset" value="0"/>
@@ -85,5 +85,7 @@
     <property name="timer" value="3000"/>
    </properties>
   </object>
+  <object name="exit" type="screen2" x="0" y="528" width="48" height="96"/>
+  <object x="552" y="360" width="72" height="72"/>
  </objectgroup>
 </map>

@@ -13,7 +13,15 @@ class Ar.Player extends Phaser.Sprite
     @runSpeed = 80
     @jumpSpeed = -275
 
-    @anchor.setTo 0.5, 0
+    @outOfBoundsKill = true
+    @worldThreshold = 100
+
+    @events.onKilled.add ->
+      console.log 'killed'
+      @respawn()
+    , @
+
+    @anchor.setTo 0.5, 0.5
     @body.width = 24
     @body.height = 58
     @body.offset.y = 6
@@ -59,6 +67,10 @@ class Ar.Player extends Phaser.Sprite
         @cheat.exit.call @
 
     super()
+
+  setStart: (x, y, facing) ->
+    @start.setTo x, y
+    @startFacing = facing
 
   enterCheat: ->
     if @keys.up.justPressed 250
@@ -122,4 +134,9 @@ class Ar.Player extends Phaser.Sprite
         @cheat = null
 
   respawn: ->
+    if @startFacing is 'right'
+      @scale.x = 1
+    else if @startFacing is 'left'
+      @scale.x = -1
+      
     @reset @start.x, @start.y

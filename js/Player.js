@@ -17,7 +17,13 @@
       this.cheatDuration = 3000;
       this.runSpeed = 80;
       this.jumpSpeed = -275;
-      this.anchor.setTo(0.5, 0);
+      this.outOfBoundsKill = true;
+      this.worldThreshold = 100;
+      this.events.onKilled.add(function() {
+        console.log('killed');
+        return this.respawn();
+      }, this);
+      this.anchor.setTo(0.5, 0.5);
       this.body.width = 24;
       this.body.height = 58;
       this.body.offset.y = 6;
@@ -61,6 +67,11 @@
         }
       }
       return Player.__super__.preUpdate.call(this);
+    };
+
+    Player.prototype.setStart = function(x, y, facing) {
+      this.start.setTo(x, y);
+      return this.startFacing = facing;
     };
 
     Player.prototype.enterCheat = function() {
@@ -139,6 +150,11 @@
     };
 
     Player.prototype.respawn = function() {
+      if (this.startFacing === 'right') {
+        this.scale.x = 1;
+      } else if (this.startFacing === 'left') {
+        this.scale.x = -1;
+      }
       return this.reset(this.start.x, this.start.y);
     };
 
