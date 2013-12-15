@@ -107,6 +107,7 @@
       this.body = null;
       this.fixedToCamera = true;
       this.visible = false;
+      this.cameraOffset.setTo(64, 150);
     }
 
     Text.prototype.preUpdate = function() {

@@ -60,6 +60,7 @@ class Ar.Text extends Phaser.Sprite
     @body = null
     @fixedToCamera = true
     @visible = false
+    @cameraOffset.setTo 64, 150
 
   preUpdate: ->
     super()
