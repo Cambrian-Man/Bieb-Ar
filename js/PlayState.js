@@ -12,6 +12,9 @@
 
     PlayState.prototype.create = function() {
       var object, spawner, _i, _len, _ref, _results;
+      this.backdrop = this.add.tileSprite(0, 0, 400, 300, 'backdrop');
+      this.backdrop.body.allowGravity = false;
+      this.backdrop.fixedToCamera = true;
       this.loadMap('tiles', 'screen1');
       Ar.Game.physics.gravity = new Phaser.Point(0, 10);
       this.player = new Ar.Player(Ar.Game, 128, 128);
@@ -41,6 +44,7 @@
     };
 
     PlayState.prototype.render = function() {
+      this.backdrop.tilePosition.x = -(this.camera.x / 3);
       return PlayState.__super__.render.call(this);
     };
 
@@ -53,6 +57,7 @@
       Ar.Game.stage.scale.refresh();
       Ar.Game.load.image('player', 'assets/graphics/player.png');
       Ar.Game.load.image('fireball', 'assets/graphics/fireball.png');
+      Ar.Game.load.image('backdrop', 'assets/graphics/backdrop.png');
       Ar.Game.load.tileset('tiles', 'assets/graphics/tiles.png', 48, 48);
       return Ar.Game.load.tilemap('screen1', 'assets/levels/screen1.json', null, Phaser.Tilemap.TILED_JSON);
     };

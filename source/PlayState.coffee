@@ -4,6 +4,10 @@ class Ar.PlayState extends Phaser.State
   constructor: ->
 
   create: ->
+    @backdrop = @add.tileSprite 0, 0, 400, 300, 'backdrop'
+    @backdrop.body.allowGravity = false
+    @backdrop.fixedToCamera = true
+
     @loadMap 'tiles', 'screen1'
 
     Ar.Game.physics.gravity = new Phaser.Point 0, 10
@@ -26,6 +30,7 @@ class Ar.PlayState extends Phaser.State
           spawner.start()
 
   render: ->
+    @backdrop.tilePosition.x = -(@camera.x / 3)
     # Ar.Game.debug.renderSpriteBody(@player);
     super()
 
@@ -40,6 +45,7 @@ class Ar.PlayState extends Phaser.State
 
     Ar.Game.load.image 'player', 'assets/graphics/player.png'
     Ar.Game.load.image 'fireball', 'assets/graphics/fireball.png'
+    Ar.Game.load.image 'backdrop', 'assets/graphics/backdrop.png'
 
     Ar.Game.load.tileset 'tiles', 'assets/graphics/tiles.png', 48, 48
     Ar.Game.load.tilemap 'screen1', 'assets/levels/screen1.json', null, Phaser.Tilemap.TILED_JSON
