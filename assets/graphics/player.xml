@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
-<!-- $TexturePacker:SmartUpdate:3874812878776829cf3c1229ae68b85e:8b7346a3d43c1dbb779c5f6293acc7be:6c45f23d1211d37495dbafcfd7f348f6$ -->
+<!-- $TexturePacker:SmartUpdate:d3c2572d4c41a96719887c330cd26a27:2512ba27a8f71f298209d99c263c62d8:6c45f23d1211d37495dbafcfd7f348f6$ -->
 <TextureAtlas imagePath="player.png">
     <SubTexture name="player_0" x="202" y="2" width="48" height="58" frameX="-4" frameY="-6" frameWidth="64" frameHeight="64"/>
-    <SubTexture name="player_1" x="102" y="2" width="48" height="60" frameX="-4" frameY="-4" frameWidth="64" frameHeight="64"/>
-    <SubTexture name="player_2" x="52" y="2" width="48" height="60" frameX="-4" frameY="-4" frameWidth="64" frameHeight="64"/>
-    <SubTexture name="player_3" x="2" y="2" width="48" height="60" frameX="-4" frameY="-4" frameWidth="64" frameHeight="64"/>
-    <SubTexture name="player_4" x="152" y="2" width="48" height="58" frameX="-4" frameY="-3" frameWidth="64" frameHeight="64"/>
+    <SubTexture name="player_1" x="152" y="2" width="48" height="60" frameX="-4" frameY="-4" frameWidth="64" frameHeight="64"/>
+    <SubTexture name="player_2" x="102" y="2" width="48" height="60" frameX="-4" frameY="-4" frameWidth="64" frameHeight="64"/>
+    <SubTexture name="player_3" x="52" y="2" width="48" height="60" frameX="-4" frameY="-4" frameWidth="64" frameHeight="64"/>
+    <SubTexture name="player_4" x="2" y="2" width="48" height="60" frameX="-4" frameY="-3" frameWidth="64" frameHeight="64"/>
 </TextureAtlas>

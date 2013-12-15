@@ -24,7 +24,7 @@
       this.inputEnabled = true;
       this.keys = Ar.Game.input.keyboard.createCursorKeys();
       this.start = new Phaser.Point();
-      this.animations.add('stand', ['player_1']);
+      this.animations.add('stand', ['player_0']);
       this.animations.add('walk', ['player_0', 'player_1', 'player_2', 'player_3'], 6, true);
       this.animations.add('jump', ['player_4']);
     }

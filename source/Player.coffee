@@ -24,7 +24,7 @@ class Ar.Player extends Phaser.Sprite
 
     @start = new Phaser.Point()
 
-    @animations.add 'stand', ['player_1']
+    @animations.add 'stand', ['player_0']
     @animations.add 'walk', ['player_0', 'player_1', 'player_2', 'player_3'], 6, true
     @animations.add 'jump', ['player_4']
 
