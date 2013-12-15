@@ -52,4 +52,31 @@ class Ar.Exit extends Phaser.Sprite
 
 class Ar.TextManager
   constructor: ->
-    
+
+
+class Ar.Text extends Phaser.Sprite
+  constructor: (@player) ->
+    super(Ar.Game, 0, 0, 'text', 'text_0')
+    @body = null
+    @fixedToCamera = true
+    @visible = false
+
+  preUpdate: ->
+    super()
+
+    if @player.cheat?
+      @visible = true
+
+      switch @player.cheat.name
+        when 'Super Jump'
+          @frameName = 'text_0'
+        when 'Super Speed'
+          @frameName = 'text_1'
+        when 'Invincibility'
+          @frameName = 'text_2'
+
+      running = Date.now() - @player.cheatStart
+      if running > 3000
+        @visible = (Math.floor(running / 100) % 2) == 0
+    else
+      @visible = false

@@ -98,6 +98,45 @@
 
   })();
 
+  Ar.Text = (function(_super) {
+    __extends(Text, _super);
+
+    function Text(player) {
+      this.player = player;
+      Text.__super__.constructor.call(this, Ar.Game, 0, 0, 'text', 'text_0');
+      this.body = null;
+      this.fixedToCamera = true;
+      this.visible = false;
+    }
+
+    Text.prototype.preUpdate = function() {
+      var running;
+      Text.__super__.preUpdate.call(this);
+      if (this.player.cheat != null) {
+        this.visible = true;
+        switch (this.player.cheat.name) {
+          case 'Super Jump':
+            this.frameName = 'text_0';
+            break;
+          case 'Super Speed':
+            this.frameName = 'text_1';
+            break;
+          case 'Invincibility':
+            this.frameName = 'text_2';
+        }
+        running = Date.now() - this.player.cheatStart;
+        if (running > 3000) {
+          return this.visible = (Math.floor(running / 100) % 2) === 0;
+        }
+      } else {
+        return this.visible = false;
+      }
+    };
+
+    return Text;
+
+  })(Phaser.Sprite);
+
 }).call(this);
 
 /*

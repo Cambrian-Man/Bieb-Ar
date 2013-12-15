@@ -40,8 +40,8 @@
  <layer name="Walls" width="20" height="30">
   <data encoding="csv">
 2,0,0,0,0,0,0,0,0,0,0,13,13,13,13,13,13,13,13,13,
-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,42,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,42,
 2,0,0,0,0,0,0,21,21,21,21,3,3,3,3,3,3,3,3,3,
 2,0,0,0,0,0,0,0,0,0,0,13,2,2,2,2,2,2,2,2,
 2,0,0,0,0,0,0,0,0,0,0,0,13,13,13,13,13,2,2,2,
@@ -73,7 +73,7 @@
  </layer>
  <objectgroup name="Objects" width="20" height="30">
   <object name="start" x="1806" y="540" width="36" height="72"/>
-  <object name="start" type="left" x="912" y="72" width="36" height="72"/>
+  <object name="start" type="left" x="864" y="72" width="36" height="72"/>
   <object name="exit" type="screen3" x="912" y="1056" width="48" height="144"/>
   <object name="fireball" type="up" x="720" y="816" width="48" height="48">
    <properties>

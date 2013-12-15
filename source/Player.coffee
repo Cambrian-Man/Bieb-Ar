@@ -116,7 +116,6 @@ class Ar.Player extends Phaser.Sprite
         @cheatCode = null
     else if @cheatCode?.length > 4
       @cheatCode.shift()
-      console.log @cheatCode
 
   cheats:
     superJump:

@@ -125,8 +125,7 @@
           return this.cheatCode = null;
         }
       } else if (((_ref1 = this.cheatCode) != null ? _ref1.length : void 0) > 4) {
-        this.cheatCode.shift();
-        return console.log(this.cheatCode);
+        return this.cheatCode.shift();
       }
     };
 
