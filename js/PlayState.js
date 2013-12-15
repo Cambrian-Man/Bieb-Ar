@@ -69,6 +69,7 @@
       this.tileset.setCollisionRange(1, 2, true, true, true, true);
       this.tileset.setCollision(10, true, true, true, true);
       this.tileset.setCollision(12, true, true, true, true);
+      this.tileset.setCollision(20, true, true, true, true);
       this.background = this.add.tilemapLayer(0, 0, 400, 300, this.tileset, this.map, 0);
       this.walls = this.add.tilemapLayer(0, 0, 400, 300, this.tileset, this.map, 1);
       this.walls.resizeWorld();

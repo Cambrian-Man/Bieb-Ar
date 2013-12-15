@@ -57,6 +57,7 @@ class Ar.PlayState extends Phaser.State
     @tileset.setCollisionRange 1, 2, true, true, true, true
     @tileset.setCollision 10, true, true, true, true
     @tileset.setCollision 12, true, true, true, true
+    @tileset.setCollision 20, true, true, true, true
 
     @background = @add.tilemapLayer 0, 0, 400, 300, @tileset, @map, 0
 

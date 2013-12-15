@@ -4,6 +4,70 @@
 		"selected_items":
 		[
 			[
+				"pl",
+				"player_1"
+			],
+			[
+				"fireb",
+				"fireballs"
+			],
+			[
+				"fire",
+				"fireball"
+			],
+			[
+				"fireba",
+				"fireball"
+			],
+			[
+				"star",
+				"startTime"
+			],
+			[
+				"cheat",
+				"cheatCode"
+			],
+			[
+				"sc",
+				"screen1"
+			],
+			[
+				"chea",
+				"cheatCode"
+			],
+			[
+				"jump",
+				"jumpSpeed"
+			],
+			[
+				"super",
+				"superJump"
+			],
+			[
+				"enter",
+				"enterCheat"
+			],
+			[
+				"ke",
+				"keys"
+			],
+			[
+				"tile",
+				"tileset"
+			],
+			[
+				"key",
+				"keyboard"
+			],
+			[
+				"tilemap",
+				"tilemapLayer"
+			],
+			[
+				"g",
+				"Game"
+			],
+			[
 				"re",
 				"render"
 			],
@@ -450,96 +514,40 @@
 			[
 				"colors",
 				"Colors"
-			],
-			[
-				"cons",
-				"controls"
-			],
-			[
-				"editor",
-				"Editor"
-			],
-			[
-				"el",
-				"element"
-			],
-			[
-				"sele",
-				"selectDialog"
-			],
-			[
-				"Wal",
-				"Wall"
-			],
-			[
-				"contr",
-				"controlName"
-			],
-			[
-				"f",
-				"forof	Object Comprehension"
-			],
-			[
-				"view",
-				"viewDefinition"
-			],
-			[
-				"zap",
-				"zapApp"
-			],
-			[
-				"build",
-				"buildMap"
-			],
-			[
-				"err",
-				"error"
-			],
-			[
-				"objec",
-				"objectType"
-			],
-			[
-				"pl",
-				"player"
-			],
-			[
-				"save",
-				"saveBoard"
-			],
-			[
-				"Ed",
-				"editTimer"
-			],
-			[
-				"clear",
-				"clearInterval"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "Gruntfile.coffee",
-			"settings":
-			{
-				"buffer_size": 467,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 379,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "source/PlayState.coffee",
 			"settings":
 			{
-				"buffer_size": 517,
+				"buffer_size": 2697,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "assets/levels/screen2.json",
+			"settings":
+			{
+				"buffer_size": 5802,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "assets/graphics/player.xml",
+			"settings":
+			{
+				"buffer_size": 941,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/Fireball.coffee",
+			"settings":
+			{
+				"buffer_size": 653,
 				"line_ending": "Windows"
 			}
 		},
@@ -547,7 +555,7 @@
 			"file": "source/Player.coffee",
 			"settings":
 			{
-				"buffer_size": 122,
+				"buffer_size": 2928,
 				"line_ending": "Windows"
 			}
 		},
@@ -617,11 +625,22 @@
 	"file_history":
 	[
 		"/C/Users/Evan/Documents/GitHub/WonderZone/src/PlayState.coffee",
+		"/C/Users/Evan/Documents/GitHub/phaser/examples/collision/group vs group.js",
+		"/C/Users/Evan/Documents/GitHub/phaser/build/phaser.js",
+		"/C/Users/Evan/Documents/GitHub/phaser/examples/collision/sprite vs group.js",
+		"/C/Users/Evan/Documents/GitHub/phaser/examples/groups/create group.js",
+		"/C/Users/Evan/Documents/GitHub/Bieb-Ar/index.html",
+		"/C/Users/Evan/Documents/GitHub/Bieb-Ar/source/Fireball.coffee",
+		"/C/Users/Evan/Documents/GitHub/phaser/examples/tilemaps/sci fly.js",
+		"/C/Users/Evan/Documents/GitHub/Bieb-Ar/Gruntfile.coffee",
+		"/C/Users/Evan/Documents/GitHub/Bieb-Ar/style.css",
+		"/C/Users/Evan/Documents/GitHub/phaser/Gruntfile.js",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/src/Player.coffee",
+		"/C/Users/Evan/Documents/GitHub/Bieb-Ar/source/Game.coffee",
 		"/C/Users/Evan/Documents/GitHub/Bieb-Ar/js/PlayState.js",
 		"/C/Users/Evan/Documents/GitHub/WonderZone/game/game.js",
 		"/C/Users/Evan/Documents/GitHub/WonderZone/src/game.coffee",
 		"/C/Users/Evan/Documents/GitHub/WonderZone/Gruntfile.coffee",
-		"/C/Users/Evan/Documents/GitHub/Bieb-Ar/source/Game.coffee",
 		"/C/Users/Evan/AppData/Roaming/Sublime Text 3/Packages/User/CoffeeScript.sublime-settings",
 		"/C/Users/Evan/Documents/GitHub/Bieb-Ar/js/game.coffee",
 		"/C/Users/Evan/Documents/My Box Files/#zap/Gruntfile.coffee",
@@ -732,18 +751,7 @@
 		"/F/minecraftforge-src-1.4.7-6.6.0.497/forge/mcp/conf/mcp.cfg",
 		"/F/Monsters/index.html",
 		"/F/GitHub/Monsters/src/com/cambrianman/monsters/levels/rider.tmx",
-		"/F/GitHub/Monsters/src/com/cambrianman/monsters/levels/lostWoods.tmx",
-		"/F/GitHub/Monsters/src/com/cambrianman/monsters/levels/tiles.tsx",
-		"/F/GitHub/Monsters/src/com/cambrianman/monsters/levels/start.tmx",
-		"/C/Users/Evan2/Documents/Monsters/.gitignore",
-		"/C/Users/Evan2/Documents/My Box Files/Monsters/src/com/cambrianman/monsters/levels/test2.tmx",
-		"/C/Users/Evan2/Documents/My Box Files/Monsters/src/com/cambrianman/monsters/levels/test.tmx",
-		"/C/Users/Evan2/Documents/My Box Files/Monsters/.gitignore",
-		"/C/Users/Evan2/Documents/Monsters/.git/config",
-		"/E/Downloads/MindCrack/minecraft/config/ChickenChunks.cfg",
-		"/E/Downloads/MindCrack/minecraft/config/NEI.cfg",
-		"/E/Downloads/MindCrack/minecraft/config/ComputerCraft.cfg",
-		"/C/Program Files (x86)/FlashDevelop/Tools/flexsdk/bin/jvm.config"
+		"/F/GitHub/Monsters/src/com/cambrianman/monsters/levels/lostWoods.tmx"
 	],
 	"find":
 	{
@@ -849,24 +857,24 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Gruntfile.coffee",
+					"file": "source/PlayState.coffee",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 467,
+						"buffer_size": 2697,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								272,
-								272
+								1001,
+								1001
 							]
 						],
 						"settings":
@@ -876,33 +884,35 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 486.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "index.html",
+					"file": "assets/levels/screen2.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 379,
+						"buffer_size": 5802,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								250,
-								250
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
+						"translation.x": 834.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -910,26 +920,24 @@
 				},
 				{
 					"buffer": 2,
-					"file": "source/PlayState.coffee",
+					"file": "assets/graphics/player.xml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 517,
+						"buffer_size": 941,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								517,
-								517
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/XML/XML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -939,19 +947,19 @@
 				},
 				{
 					"buffer": 3,
-					"file": "source/Player.coffee",
+					"file": "source/Fireball.coffee",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 122,
+						"buffer_size": 653,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								86,
-								86
+								3,
+								3
 							]
 						],
 						"settings":
@@ -966,6 +974,33 @@
 				},
 				{
 					"buffer": 4,
+					"file": "source/Player.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2928,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								609,
+								609
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 216.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
 					"file": "source/Game.coffee",
 					"semi_transient": false,
 					"settings":
@@ -977,8 +1012,8 @@
 						"selection":
 						[
 							[
-								54,
-								54
+								69,
+								69
 							]
 						],
 						"settings":
