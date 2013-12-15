@@ -57,8 +57,21 @@
     __extends(Squid, _super);
 
     function Squid(x, y) {
-      Squid.__super__.constructor.call(this, Ar.Game, x, y, 'squid');
+      Squid.__super__.constructor.call(this, Ar.Game, x, y + 32, 'squid');
+      this.anchor.x = 0.5;
+      this.direction = 1;
     }
+
+    Squid.prototype.preUpdate = function() {
+      if (this.body.touching.right) {
+        this.direction = -1;
+      } else if (this.body.touching.left) {
+        this.direction = 1;
+      }
+      this.body.velocity.x = 40 * this.direction;
+      this.scale.x = this.direction;
+      return Squid.__super__.preUpdate.call(this);
+    };
 
     return Squid;
 

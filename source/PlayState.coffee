@@ -10,7 +10,7 @@ class Ar.PlayState extends Phaser.State
 
     @player = new Ar.Player Ar.Game, 128, 128
 
-    @loadMap 'tiles', 'screen1'
+    @loadMap 'tiles', 'screen3'
 
     Ar.Game.physics.gravity = new Phaser.Point 0, 10
  
@@ -40,6 +40,7 @@ class Ar.PlayState extends Phaser.State
     Ar.Game.load.tileset 'tiles', 'assets/graphics/tiles.png', 48, 48
     Ar.Game.load.tilemap 'screen1', 'assets/levels/screen1.json', null, Phaser.Tilemap.TILED_JSON
     Ar.Game.load.tilemap 'screen2', 'assets/levels/screen2.json', null, Phaser.Tilemap.TILED_JSON
+    Ar.Game.load.tilemap 'screen3', 'assets/levels/screen3.json', null, Phaser.Tilemap.TILED_JSON
 
   loadMap: (tiles, map) ->
     @map = @add.tilemap map
@@ -49,6 +50,8 @@ class Ar.PlayState extends Phaser.State
       @tileset.setCollision 10, true, true, true, true
       @tileset.setCollision 12, true, true, true, true
       @tileset.setCollision 20, true, true, true, true
+      @tileset.setCollisionRange 31, 33, true, true, true, true
+      @tileset.setCollision 40, true, true, true, true
 
     if not @background?
       @background = @add.tilemapLayer 0, 0, 400, 300, @tileset, @map, 0
@@ -83,7 +86,7 @@ class Ar.PlayState extends Phaser.State
     for object in data.data.layers[2].objects
       switch object.name
         when 'start'
-          @player.setStart object.x, object.y + 16, object.type
+          @player.setStart object.x, object.y, object.type
           @player.respawn()
         when 'fireball'
           @fireballs.exists = true
@@ -93,7 +96,7 @@ class Ar.PlayState extends Phaser.State
         when 'squid'
           @enemies.exists = true
           squid = new Ar.Squid object.x, object.y
-          @add.existing squid
+          @enemies.add squid
         when 'exit'
           @exit = new Ar.Exit object.x, object.y, object.width, object.height, object.type
           @add.existing @exit
@@ -108,6 +111,8 @@ class Ar.PlayState extends Phaser.State
     Ar.Game.physics.collide @player, @walls
 
     Ar.Game.physics.collide @player
+
+    Ar.Game.physics.collide @enemies, @walls
 
     Ar.Game.physics.overlap @player, @fireballs, (player) ->
       player.respawn()

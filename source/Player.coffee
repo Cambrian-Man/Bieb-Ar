@@ -8,7 +8,7 @@ class Ar.Player extends Phaser.Sprite
     @cheatKey = ''
     @cheatCode = null
     @cheatStart = -1
-    @cheatDuration = 3000
+    @cheatDuration = 4000
 
     @runSpeed = 80
     @jumpSpeed = -275
@@ -16,8 +16,9 @@ class Ar.Player extends Phaser.Sprite
     @outOfBoundsKill = true
     @worldThreshold = 100
 
+    @invincible = false
+
     @events.onKilled.add ->
-      console.log 'killed'
       @respawn()
     , @
 
@@ -69,7 +70,7 @@ class Ar.Player extends Phaser.Sprite
     super()
 
   setStart: (x, y, facing) ->
-    @start.setTo x, y
+    @start.setTo x, y + @body.halfHeight
     @startFacing = facing
 
   enterCheat: ->
@@ -107,6 +108,8 @@ class Ar.Player extends Phaser.Sprite
         @cheat = @cheats['superJump']
       else if cheatString is 'leftleftleftleft' or cheatString is 'rightrightrightright'
         @cheat = @cheats['superSpeed']
+      else if cheatString is 'uprightdownleft' or cheatString is 'upleftdownright'
+        @cheat = @cheats['invinciblity']
 
       if @cheat?
         @cheat.enter.call @
@@ -116,7 +119,7 @@ class Ar.Player extends Phaser.Sprite
 
   cheats:
     superJump:
-      name: 'superJump'
+      name: 'Super Jump'
       enter: ->
         @jumpSpeed = -500
 
@@ -125,7 +128,7 @@ class Ar.Player extends Phaser.Sprite
         @cheat = null
 
     superSpeed:
-      name: 'superSpeed'
+      name: 'Super Speed'
       enter: ->
         @runSpeed = 200
 
@@ -133,10 +136,18 @@ class Ar.Player extends Phaser.Sprite
         @runSpeed = 80
         @cheat = null
 
+    invinciblity:
+      name: 'Invincibility'
+      enter: ->
+        @invincible = true
+
+      exit: ->
+        @invincible = false
+
   respawn: ->
     if @startFacing is 'right'
       @scale.x = 1
     else if @startFacing is 'left'
       @scale.x = -1
-      
+
     @reset @start.x, @start.y

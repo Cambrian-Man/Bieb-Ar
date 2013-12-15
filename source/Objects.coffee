@@ -28,7 +28,20 @@ class Ar.Fireball extends Phaser.Sprite
 
 class Ar.Squid extends Phaser.Sprite
   constructor: (x, y) ->
-    super(Ar.Game, x, y, 'squid')
+    super(Ar.Game, x, y + 32, 'squid')
+    @anchor.x = 0.5
+    @direction = 1
+
+  preUpdate: ->
+    if @body.touching.right
+      @direction = -1
+    else if @body.touching.left
+      @direction = 1
+
+    @body.velocity.x = 40 * @direction
+
+    @scale.x = @direction
+    super()
 
 class Ar.Exit extends Phaser.Sprite
   constructor: (x, y, width, height, @target) ->

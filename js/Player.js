@@ -14,13 +14,13 @@
       this.cheatKey = '';
       this.cheatCode = null;
       this.cheatStart = -1;
-      this.cheatDuration = 3000;
+      this.cheatDuration = 4000;
       this.runSpeed = 80;
       this.jumpSpeed = -275;
       this.outOfBoundsKill = true;
       this.worldThreshold = 100;
+      this.invincible = false;
       this.events.onKilled.add(function() {
-        console.log('killed');
         return this.respawn();
       }, this);
       this.anchor.setTo(0.5, 0.5);
@@ -70,7 +70,7 @@
     };
 
     Player.prototype.setStart = function(x, y, facing) {
-      this.start.setTo(x, y);
+      this.start.setTo(x, y + this.body.halfHeight);
       return this.startFacing = facing;
     };
 
@@ -117,6 +117,8 @@
           this.cheat = this.cheats['superJump'];
         } else if (cheatString === 'leftleftleftleft' || cheatString === 'rightrightrightright') {
           this.cheat = this.cheats['superSpeed'];
+        } else if (cheatString === 'uprightdownleft' || cheatString === 'upleftdownright') {
+          this.cheat = this.cheats['invinciblity'];
         }
         if (this.cheat != null) {
           this.cheat.enter.call(this);
@@ -128,7 +130,7 @@
 
     Player.prototype.cheats = {
       superJump: {
-        name: 'superJump',
+        name: 'Super Jump',
         enter: function() {
           return this.jumpSpeed = -500;
         },
@@ -138,13 +140,22 @@
         }
       },
       superSpeed: {
-        name: 'superSpeed',
+        name: 'Super Speed',
         enter: function() {
           return this.runSpeed = 200;
         },
         exit: function() {
           this.runSpeed = 80;
           return this.cheat = null;
+        }
+      },
+      invinciblity: {
+        name: 'Invincibility',
+        enter: function() {
+          return this.invincible = true;
+        },
+        exit: function() {
+          return this.invincible = false;
         }
       }
     };

@@ -15,7 +15,7 @@
       this.backdrop.body.allowGravity = false;
       this.backdrop.fixedToCamera = true;
       this.player = new Ar.Player(Ar.Game, 128, 128);
-      this.loadMap('tiles', 'screen1');
+      this.loadMap('tiles', 'screen3');
       Ar.Game.physics.gravity = new Phaser.Point(0, 10);
       this.add.existing(this.player);
       return this.camera.follow(this.player);
@@ -39,7 +39,8 @@
       Ar.Game.load.image('squid', 'assets/graphics/squid.png');
       Ar.Game.load.tileset('tiles', 'assets/graphics/tiles.png', 48, 48);
       Ar.Game.load.tilemap('screen1', 'assets/levels/screen1.json', null, Phaser.Tilemap.TILED_JSON);
-      return Ar.Game.load.tilemap('screen2', 'assets/levels/screen2.json', null, Phaser.Tilemap.TILED_JSON);
+      Ar.Game.load.tilemap('screen2', 'assets/levels/screen2.json', null, Phaser.Tilemap.TILED_JSON);
+      return Ar.Game.load.tilemap('screen3', 'assets/levels/screen3.json', null, Phaser.Tilemap.TILED_JSON);
     };
 
     PlayState.prototype.loadMap = function(tiles, map) {
@@ -51,6 +52,8 @@
         this.tileset.setCollision(10, true, true, true, true);
         this.tileset.setCollision(12, true, true, true, true);
         this.tileset.setCollision(20, true, true, true, true);
+        this.tileset.setCollisionRange(31, 33, true, true, true, true);
+        this.tileset.setCollision(40, true, true, true, true);
       }
       if (this.background == null) {
         this.background = this.add.tilemapLayer(0, 0, 400, 300, this.tileset, this.map, 0);
@@ -86,7 +89,7 @@
         object = _ref[_i];
         switch (object.name) {
           case 'start':
-            this.player.setStart(object.x, object.y + 16, object.type);
+            this.player.setStart(object.x, object.y, object.type);
             _results.push(this.player.respawn());
             break;
           case 'fireball':
@@ -98,7 +101,7 @@
           case 'squid':
             this.enemies.exists = true;
             squid = new Ar.Squid(object.x, object.y);
-            _results.push(this.add.existing(squid));
+            _results.push(this.enemies.add(squid));
             break;
           case 'exit':
             this.exit = new Ar.Exit(object.x, object.y, object.width, object.height, object.type);
@@ -124,6 +127,7 @@
       }
       Ar.Game.physics.collide(this.player, this.walls);
       Ar.Game.physics.collide(this.player);
+      Ar.Game.physics.collide(this.enemies, this.walls);
       Ar.Game.physics.overlap(this.player, this.fireballs, function(player) {
         player.respawn();
         return false;
