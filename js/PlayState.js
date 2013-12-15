@@ -15,10 +15,13 @@
       this.backdrop.body.allowGravity = false;
       this.backdrop.fixedToCamera = true;
       this.player = new Ar.Player(Ar.Game, 128, 128);
-      this.loadMap('tiles', 'screen3');
+      this.loadMap('tiles', 'screen1');
       Ar.Game.physics.gravity = new Phaser.Point(0, 10);
       this.add.existing(this.player);
-      return this.camera.follow(this.player);
+      this.camera.follow(this.player);
+      this.border = this.add.sprite(0, 0, 'border');
+      this.border.body = null;
+      return this.border.fixedToCamera = true;
     };
 
     PlayState.prototype.render = function() {
@@ -33,9 +36,10 @@
       Ar.Game.stage.scale.maxHeight = 600;
       Ar.Game.stage.scale.setSize();
       Ar.Game.stage.scale.refresh();
+      Ar.Game.load.image('border', 'assets/graphics/border.png');
+      Ar.Game.load.image('backdrop', 'assets/graphics/backdrop.png');
       Ar.Game.load.atlasXML('player', 'assets/graphics/player.png', 'assets/graphics/player.xml');
       Ar.Game.load.image('fireball', 'assets/graphics/fireball.png');
-      Ar.Game.load.image('backdrop', 'assets/graphics/backdrop.png');
       Ar.Game.load.image('squid', 'assets/graphics/squid.png');
       Ar.Game.load.tileset('tiles', 'assets/graphics/tiles.png', 48, 48);
       Ar.Game.load.tilemap('screen1', 'assets/levels/screen1.json', null, Phaser.Tilemap.TILED_JSON);
@@ -67,7 +71,10 @@
       }
       this.walls.resizeWorld();
       data = Ar.Game.cache.getTilemapData(map);
-      return this.loadObjects(data);
+      this.loadObjects(data);
+      if (this.border != null) {
+        return this.border.bringToTop();
+      }
     };
 
     PlayState.prototype.loadObjects = function(data) {
@@ -129,8 +136,14 @@
       Ar.Game.physics.collide(this.player);
       Ar.Game.physics.collide(this.enemies, this.walls);
       Ar.Game.physics.overlap(this.player, this.fireballs, function(player) {
-        player.respawn();
-        return false;
+        if (!player.invincible) {
+          return player.respawn();
+        }
+      }, null, this);
+      Ar.Game.physics.overlap(this.player, this.enemies, function(player) {
+        if (!player.invincible) {
+          return player.respawn();
+        }
       }, null, this);
       Ar.Game.physics.collide(this.fireballs, this.walls, function(fireball) {
         return fireball.kill();

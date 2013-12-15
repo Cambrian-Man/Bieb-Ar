@@ -32,6 +32,8 @@ class Ar.Squid extends Phaser.Sprite
     @anchor.x = 0.5
     @direction = 1
 
+    @body.width = 36
+
   preUpdate: ->
     if @body.touching.right
       @direction = -1
@@ -47,3 +49,7 @@ class Ar.Exit extends Phaser.Sprite
   constructor: (x, y, width, height, @target) ->
     super(Ar.Game, x, y, new Phaser.BitmapData(Ar.Game, width, height))
     @body.allowGravity = false
+
+class Ar.TextManager
+  constructor: ->
+    

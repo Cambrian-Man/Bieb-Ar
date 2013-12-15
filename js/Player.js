@@ -75,7 +75,7 @@
     };
 
     Player.prototype.enterCheat = function() {
-      var cheatString, _ref;
+      var cheatString, _ref, _ref1;
       if (this.keys.up.justPressed(250)) {
         this.cheatKey = 'up';
       } else if (this.keys.down.justPressed(250)) {
@@ -112,7 +112,6 @@
       }
       if (((_ref = this.cheatCode) != null ? _ref.length : void 0) === 4) {
         cheatString = this.cheatCode.join('');
-        console.log(cheatString);
         if (cheatString === 'upupupup') {
           this.cheat = this.cheats['superJump'];
         } else if (cheatString === 'leftleftleftleft' || cheatString === 'rightrightrightright') {
@@ -123,8 +122,11 @@
         if (this.cheat != null) {
           this.cheat.enter.call(this);
           this.cheatStart = Date.now();
+          return this.cheatCode = null;
         }
-        return this.cheatCode = null;
+      } else if (((_ref1 = this.cheatCode) != null ? _ref1.length : void 0) > 4) {
+        this.cheatCode.shift();
+        return console.log(this.cheatCode);
       }
     };
 
@@ -155,7 +157,8 @@
           return this.invincible = true;
         },
         exit: function() {
-          return this.invincible = false;
+          this.invincible = false;
+          return this.cheat = null;
         }
       }
     };

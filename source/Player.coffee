@@ -102,7 +102,6 @@ class Ar.Player extends Phaser.Sprite
 
     if @cheatCode?.length is 4
       cheatString = @cheatCode.join('')
-      console.log cheatString
 
       if cheatString is 'upupupup'
         @cheat = @cheats['superJump']
@@ -114,8 +113,10 @@ class Ar.Player extends Phaser.Sprite
       if @cheat?
         @cheat.enter.call @
         @cheatStart = Date.now()
-
-      @cheatCode = null
+        @cheatCode = null
+    else if @cheatCode?.length > 4
+      @cheatCode.shift()
+      console.log @cheatCode
 
   cheats:
     superJump:
@@ -143,6 +144,7 @@ class Ar.Player extends Phaser.Sprite
 
       exit: ->
         @invincible = false
+        @cheat = null
 
   respawn: ->
     if @startFacing is 'right'

@@ -10,7 +10,7 @@ class Ar.PlayState extends Phaser.State
 
     @player = new Ar.Player Ar.Game, 128, 128
 
-    @loadMap 'tiles', 'screen3'
+    @loadMap 'tiles', 'screen1'
 
     Ar.Game.physics.gravity = new Phaser.Point 0, 10
  
@@ -18,9 +18,12 @@ class Ar.PlayState extends Phaser.State
 
     @camera.follow @player
 
+    @border = @add.sprite 0, 0, 'border'
+    @border.body = null
+    @border.fixedToCamera = true
+
   render: ->
     @backdrop.tilePosition.x = -(@camera.x / 3)
-    # Ar.Game.debug.renderSpriteBody(@player);
     super()
 
   preload: ->
@@ -32,9 +35,12 @@ class Ar.PlayState extends Phaser.State
     Ar.Game.stage.scale.setSize()
     Ar.Game.stage.scale.refresh()
 
+    Ar.Game.load.image 'border', 'assets/graphics/border.png'
+    Ar.Game.load.image 'backdrop', 'assets/graphics/backdrop.png'
+
+
     Ar.Game.load.atlasXML 'player', 'assets/graphics/player.png', 'assets/graphics/player.xml'
     Ar.Game.load.image 'fireball', 'assets/graphics/fireball.png'
-    Ar.Game.load.image 'backdrop', 'assets/graphics/backdrop.png'
     Ar.Game.load.image 'squid', 'assets/graphics/squid.png'
 
     Ar.Game.load.tileset 'tiles', 'assets/graphics/tiles.png', 48, 48
@@ -68,6 +74,9 @@ class Ar.PlayState extends Phaser.State
     data = Ar.Game.cache.getTilemapData map
 
     @loadObjects(data)
+
+    if @border?
+      @border.bringToTop()
 
   loadObjects: (data) ->
     if @fireballs?
@@ -115,8 +124,11 @@ class Ar.PlayState extends Phaser.State
     Ar.Game.physics.collide @enemies, @walls
 
     Ar.Game.physics.overlap @player, @fireballs, (player) ->
-      player.respawn()
-      return false
+      if not player.invincible then player.respawn()
+    , null, @
+
+    Ar.Game.physics.overlap @player, @enemies, (player) ->
+      if not player.invincible then player.respawn()
     , null, @
 
     Ar.Game.physics.collide @fireballs, @walls, (fireball) ->

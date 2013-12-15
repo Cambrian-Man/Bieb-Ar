@@ -60,6 +60,7 @@
       Squid.__super__.constructor.call(this, Ar.Game, x, y + 32, 'squid');
       this.anchor.x = 0.5;
       this.direction = 1;
+      this.body.width = 36;
     }
 
     Squid.prototype.preUpdate = function() {
@@ -89,6 +90,13 @@
     return Exit;
 
   })(Phaser.Sprite);
+
+  Ar.TextManager = (function() {
+    function TextManager() {}
+
+    return TextManager;
+
+  })();
 
 }).call(this);
 
