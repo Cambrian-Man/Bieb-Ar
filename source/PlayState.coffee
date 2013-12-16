@@ -10,7 +10,7 @@ class Ar.PlayState extends Phaser.State
 
     @player = new Ar.Player Ar.Game, 128, 128
 
-    @loadMap 'tiles', 'screen5'
+    @loadMap 'tiles', 'screen1'
 
     Ar.Game.physics.gravity = new Phaser.Point 0, 10
  
@@ -25,7 +25,8 @@ class Ar.PlayState extends Phaser.State
     @text = new Ar.Text @player
     @add.existing @text
 
-    @sound.play 'music', 1, true
+    @music = @add.audio 'music', 1, true
+    @music.play '', 0, 1, true
 
   render: ->
     @backdrop.tilePosition.x = -(@camera.x / 3)

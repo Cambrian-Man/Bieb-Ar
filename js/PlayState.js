@@ -15,7 +15,7 @@
       this.backdrop.body.allowGravity = false;
       this.backdrop.fixedToCamera = true;
       this.player = new Ar.Player(Ar.Game, 128, 128);
-      this.loadMap('tiles', 'screen5');
+      this.loadMap('tiles', 'screen1');
       Ar.Game.physics.gravity = new Phaser.Point(0, 10);
       this.add.existing(this.player);
       this.camera.follow(this.player);
@@ -24,7 +24,8 @@
       this.border.fixedToCamera = true;
       this.text = new Ar.Text(this.player);
       this.add.existing(this.text);
-      return this.sound.play('music', 1, true);
+      this.music = this.add.audio('music', 1, true);
+      return this.music.play('', 0, 1, true);
     };
 
     PlayState.prototype.render = function() {
