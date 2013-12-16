@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "Title.js",
+  "sourceRoot": "..\\source/",
+  "sources": [
+    "Title.coffee"
+  ],
+  "names": [],
+  "mappings": "AA4J6B;CAAA;CAAA"
+}

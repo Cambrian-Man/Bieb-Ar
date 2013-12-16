@@ -15,7 +15,7 @@
       this.backdrop.body.allowGravity = false;
       this.backdrop.fixedToCamera = true;
       this.player = new Ar.Player(Ar.Game, 128, 128);
-      this.loadMap('tiles', 'screen3');
+      this.loadMap('tiles', 'screen5');
       Ar.Game.physics.gravity = new Phaser.Point(0, 10);
       this.add.existing(this.player);
       this.camera.follow(this.player);
@@ -29,27 +29,6 @@
     PlayState.prototype.render = function() {
       this.backdrop.tilePosition.x = -(this.camera.x / 3);
       return PlayState.__super__.render.call(this);
-    };
-
-    PlayState.prototype.preload = function() {
-      Ar.Game.stage.scaleMode = Phaser.StageScaleMode.SHOW_ALL;
-      Ar.Game.stage.scale.scaleFactor.setTo(1.5, 1.5);
-      Ar.Game.stage.scale.maxWidth = 600;
-      Ar.Game.stage.scale.maxHeight = 450;
-      Ar.Game.stage.scale.setSize();
-      Ar.Game.stage.scale.refresh();
-      Ar.Game.load.image('border', 'assets/graphics/border.png');
-      Ar.Game.load.image('backdrop', 'assets/graphics/backdrop.png');
-      Ar.Game.load.atlasXML('text', 'assets/graphics/text.png', 'assets/graphics/text.xml');
-      Ar.Game.load.atlasXML('player', 'assets/graphics/player.png', 'assets/graphics/player.xml');
-      Ar.Game.load.image('fireball', 'assets/graphics/fireball.png');
-      Ar.Game.load.image('squid', 'assets/graphics/squid.png');
-      Ar.Game.load.tileset('tiles', 'assets/graphics/tiles.png', 48, 48);
-      Ar.Game.load.tilemap('screen1', 'assets/levels/screen1.json', null, Phaser.Tilemap.TILED_JSON);
-      Ar.Game.load.tilemap('screen2', 'assets/levels/screen2.json', null, Phaser.Tilemap.TILED_JSON);
-      Ar.Game.load.tilemap('screen3', 'assets/levels/screen3.json', null, Phaser.Tilemap.TILED_JSON);
-      Ar.Game.load.tilemap('screen4', 'assets/levels/screen4.json', null, Phaser.Tilemap.TILED_JSON);
-      return Ar.Game.load.tilemap('screen5', 'assets/levels/screen5.json', null, Phaser.Tilemap.TILED_JSON);
     };
 
     PlayState.prototype.loadMap = function(tiles, map) {
@@ -119,6 +98,10 @@
             this.exit = new Ar.Exit(object.x, object.y, object.width, object.height, object.type);
             _results.push(this.add.existing(this.exit));
             break;
+          case 'end':
+            this.end = this.add.sprite(object.x, object.y, new Phaser.BitmapData(Ar.Game, object.width, object.height));
+            _results.push(this.end.body.allowGravity = false);
+            break;
           default:
             _results.push(void 0);
         }
@@ -153,9 +136,14 @@
       Ar.Game.physics.collide(this.fireballs, this.walls, function(fireball) {
         return fireball.kill();
       }, null, this);
-      return Ar.Game.physics.overlap(this.player, this.exit, function(player, exit) {
+      Ar.Game.physics.overlap(this.player, this.exit, function(player, exit) {
         return this.changeMap(exit.target);
       }, null, this);
+      if (this.end != null) {
+        return Ar.Game.physics.overlap(this.player, this.end, function() {
+          return Ar.Game.state.add('end', new Ar.EndState, true);
+        }, null, this);
+      }
     };
 
     return PlayState;

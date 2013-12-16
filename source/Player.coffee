@@ -19,6 +19,7 @@ class Ar.Player extends Phaser.Sprite
     @invincible = false
 
     @events.onKilled.add ->
+      Ar.Game.sound.play 'death'
       if Ar.Asshole
         Ar.Game.state.states[Ar.Game.state.current].changeMap 'screen1'
       else
@@ -58,6 +59,7 @@ class Ar.Player extends Phaser.Sprite
 
     if Ar.Game.input.keyboard.justPressed 88, 250 and @body.touching.down
       @body.velocity.y = @jumpSpeed
+      Ar.Game.sound.play 'jumpgrunt'
 
     if not @cheat?
       @enteringCheat = Ar.Game.input.keyboard.isDown 67

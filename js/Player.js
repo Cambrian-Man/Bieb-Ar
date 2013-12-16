@@ -21,6 +21,7 @@
       this.worldThreshold = 100;
       this.invincible = false;
       this.events.onKilled.add(function() {
+        Ar.Game.sound.play('death');
         if (Ar.Asshole) {
           return Ar.Game.state.states[Ar.Game.state.current].changeMap('screen1');
         } else {
@@ -57,6 +58,7 @@
       }
       if (Ar.Game.input.keyboard.justPressed(88, 250 && this.body.touching.down)) {
         this.body.velocity.y = this.jumpSpeed;
+        Ar.Game.sound.play('jumpgrunt');
       }
       if (this.cheat == null) {
         this.enteringCheat = Ar.Game.input.keyboard.isDown(67);

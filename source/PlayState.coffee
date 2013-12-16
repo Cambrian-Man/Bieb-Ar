@@ -10,7 +10,7 @@ class Ar.PlayState extends Phaser.State
 
     @player = new Ar.Player Ar.Game, 128, 128
 
-    @loadMap 'tiles', 'screen3'
+    @loadMap 'tiles', 'screen5'
 
     Ar.Game.physics.gravity = new Phaser.Point 0, 10
  
@@ -28,31 +28,6 @@ class Ar.PlayState extends Phaser.State
   render: ->
     @backdrop.tilePosition.x = -(@camera.x / 3)
     super()
-
-  preload: ->
-    # Set up Stage Settings
-    Ar.Game.stage.scaleMode = Phaser.StageScaleMode.SHOW_ALL
-    Ar.Game.stage.scale.scaleFactor.setTo 1.5, 1.5
-    Ar.Game.stage.scale.maxWidth = 600
-    Ar.Game.stage.scale.maxHeight = 450
-    Ar.Game.stage.scale.setSize()
-    Ar.Game.stage.scale.refresh()
-
-    Ar.Game.load.image 'border', 'assets/graphics/border.png'
-    Ar.Game.load.image 'backdrop', 'assets/graphics/backdrop.png'
-
-    Ar.Game.load.atlasXML 'text', 'assets/graphics/text.png', 'assets/graphics/text.xml'
-
-    Ar.Game.load.atlasXML 'player', 'assets/graphics/player.png', 'assets/graphics/player.xml'
-    Ar.Game.load.image 'fireball', 'assets/graphics/fireball.png'
-    Ar.Game.load.image 'squid', 'assets/graphics/squid.png'
-
-    Ar.Game.load.tileset 'tiles', 'assets/graphics/tiles.png', 48, 48
-    Ar.Game.load.tilemap 'screen1', 'assets/levels/screen1.json', null, Phaser.Tilemap.TILED_JSON
-    Ar.Game.load.tilemap 'screen2', 'assets/levels/screen2.json', null, Phaser.Tilemap.TILED_JSON
-    Ar.Game.load.tilemap 'screen3', 'assets/levels/screen3.json', null, Phaser.Tilemap.TILED_JSON
-    Ar.Game.load.tilemap 'screen4', 'assets/levels/screen4.json', null, Phaser.Tilemap.TILED_JSON
-    Ar.Game.load.tilemap 'screen5', 'assets/levels/screen5.json', null, Phaser.Tilemap.TILED_JSON
 
   loadMap: (tiles, map) ->
     @map = @add.tilemap map
@@ -115,6 +90,9 @@ class Ar.PlayState extends Phaser.State
         when 'exit'
           @exit = new Ar.Exit object.x, object.y, object.width, object.height, object.type
           @add.existing @exit
+        when 'end'
+          @end = @add.sprite object.x, object.y, new Phaser.BitmapData(Ar.Game, object.width, object.height)
+          @end.body.allowGravity = false
 
   changeMap: (to) ->
     @loadMap 'tiles', to
@@ -144,3 +122,8 @@ class Ar.PlayState extends Phaser.State
     Ar.Game.physics.overlap @player, @exit, (player, exit) ->
       @changeMap exit.target
     , null, @
+
+    if @end?
+      Ar.Game.physics.overlap @player, @end, ->
+        Ar.Game.state.add 'end', new Ar.EndState, true
+      , null, @
