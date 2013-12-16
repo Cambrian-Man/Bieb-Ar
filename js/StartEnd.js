@@ -48,10 +48,10 @@
     TitleState.prototype.update = function() {
       if (Ar.Game.input.keyboard.justReleased(88)) {
         Ar.Asshole = false;
-        return Ar.Game.state.add('play', new Ar.PlayState(), true);
+        return Ar.Game.state.start('play', true, false);
       } else if (Ar.Game.input.keyboard.justReleased(67)) {
         Ar.Asshole = true;
-        return Ar.Game.state.add('play', new Ar.PlayState(), true);
+        return Ar.Game.state.start('play', true, false);
       }
     };
 
@@ -65,18 +65,17 @@
     function EndState() {}
 
     EndState.prototype.create = function() {
+      var title;
+      Ar.Game.camera.follow(null);
+      Ar.Game.camera.x = 0;
+      Ar.Game.camera.y = 0;
       Ar.Game.physics.gravity.y = 0;
-      return this.add.sprite(0, 0, 'end');
-    };
-
-    EndState.prototype.preload = function() {};
-
-    EndState.prototype.render = function() {
-      return EndState.__super__.render.call(this);
+      title = this.add.sprite(0, 0, 'end');
+      return title.body = null;
     };
 
     EndState.prototype.update = function() {
-      if (Ar.Game.input.keyboard.justReleased(67, 200)) {
+      if (Ar.Game.input.keyboard.justReleased(67, 100)) {
         return Ar.Game.state.start('default');
       }
     };

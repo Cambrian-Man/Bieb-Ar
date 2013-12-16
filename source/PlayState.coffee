@@ -125,5 +125,5 @@ class Ar.PlayState extends Phaser.State
 
     if @end?
       Ar.Game.physics.overlap @player, @end, ->
-        Ar.Game.state.add 'end', new Ar.EndState, true
+        Ar.Game.state.start 'end'
       , null, @

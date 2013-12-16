@@ -141,7 +141,7 @@
       }, null, this);
       if (this.end != null) {
         return Ar.Game.physics.overlap(this.player, this.end, function() {
-          return Ar.Game.state.add('end', new Ar.EndState, true);
+          return Ar.Game.state.start('end');
         }, null, this);
       }
     };

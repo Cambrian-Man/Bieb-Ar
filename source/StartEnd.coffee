@@ -2,7 +2,6 @@ Ar = window.Ar ?= {}
 
 class Ar.TitleState extends Phaser.State
   constructor: ->
-    # ...
 
   create: ->
     @backdrop = @add.tileSprite 0, 0, 400, 300, 'backdrop'
@@ -46,24 +45,23 @@ class Ar.TitleState extends Phaser.State
   update: ->
     if Ar.Game.input.keyboard.justReleased 88
       Ar.Asshole = false
-      Ar.Game.state.add 'play', new Ar.PlayState(), true
+      Ar.Game.state.start 'play', true, false
     else if Ar.Game.input.keyboard.justReleased 67
       Ar.Asshole = true
-      Ar.Game.state.add 'play', new Ar.PlayState(), true
+      Ar.Game.state.start 'play', true, false
 
 class Ar.EndState extends Phaser.State
   constructor: ->
     # ...
 
   create: ->
+    Ar.Game.camera.follow null
+    Ar.Game.camera.x = 0
+    Ar.Game.camera.y = 0
     Ar.Game.physics.gravity.y = 0
-    @add.sprite 0, 0, 'end'
-
-  preload: ->
-
-  render: ->
-    super()
+    title = @add.sprite 0, 0, 'end'
+    title.body = null
 
   update: ->
-    if Ar.Game.input.keyboard.justReleased 67, 200
-        Ar.Game.state.start 'default'
+    if Ar.Game.input.keyboard.justReleased 67, 100
+      Ar.Game.state.start 'default'
