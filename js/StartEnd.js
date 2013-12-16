@@ -29,6 +29,7 @@
       Ar.Game.stage.scale.refresh();
       Ar.Game.load.audio('jumpgrunt', 'assets/sound/jumpgrunt.mp3');
       Ar.Game.load.audio('death', 'assets/sound/death.mp3');
+      Ar.Game.load.audio('music', 'assets/sound/BiebMarch.mp3');
       Ar.Game.load.image('backdrop', 'assets/graphics/backdrop.png');
       Ar.Game.load.image('title', 'assets/graphics/title.png');
       Ar.Game.load.image('end', 'assets/graphics/end.png');
@@ -66,6 +67,7 @@
 
     EndState.prototype.create = function() {
       var title;
+      this.sound.stopAll();
       Ar.Game.camera.follow(null);
       Ar.Game.camera.x = 0;
       Ar.Game.camera.y = 0;

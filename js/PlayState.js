@@ -23,7 +23,8 @@
       this.border.body = null;
       this.border.fixedToCamera = true;
       this.text = new Ar.Text(this.player);
-      return this.add.existing(this.text);
+      this.add.existing(this.text);
+      return this.sound.play('music', 1, true);
     };
 
     PlayState.prototype.render = function() {

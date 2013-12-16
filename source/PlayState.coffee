@@ -25,6 +25,8 @@ class Ar.PlayState extends Phaser.State
     @text = new Ar.Text @player
     @add.existing @text
 
+    @sound.play 'music', 1, true
+
   render: ->
     @backdrop.tilePosition.x = -(@camera.x / 3)
     super()
